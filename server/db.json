@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "Flores123@gmail.com",
+      "password": "fabricio123",
+      "loginStatus": "true",
+      "registerDate": "2021-07-01"
+    },
+    {
+      "id": "2",
+      "email": "prueba123@gmail.com",
+      "password": "emanuel123",
+      "loginStatus": "true",
+      "registerDate": "2021-07-01"
+    }
+  ]
+}
