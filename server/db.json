@@ -1,18 +1,83 @@
 {
-  "users": [
+  "lawyers": [
     {
-      "id": "1",
-      "email": "Flores123@gmail.com",
-      "password": "fabricio123",
-      "loginStatus": "true",
-      "registerDate": "2021-07-01"
+      "id": 1,
+      "name": "Juan Carlos Perez Rodriguez",
+      "yearsOfExperience": 10,
+      "specialization": "Medical Malpractice Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
     },
     {
-      "id": "2",
-      "email": "prueba123@gmail.com",
-      "password": "emanuel123",
-      "loginStatus": "true",
-      "registerDate": "2021-07-01"
+      "id": 2,
+      "name": "Maria Luisa Gonzales Fernandez",
+      "yearsOfExperience": 15,
+      "specialization": "Healthcare Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 3,
+      "name": "Diego Flores Ramirez",
+      "yearsOfExperience": 12,
+      "specialization": "Pharmaceutical Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 4,
+      "name": "Fernanda Rojas Torres",
+      "yearsOfExperience": 8,
+      "specialization": "Public Health Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 5,
+      "name": "Santiago Chavez Cruz",
+      "yearsOfExperience": 20,
+      "specialization": "Medical Ethics Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 6,
+      "name": "Valeria Medina Alvarado",
+      "yearsOfExperience": 7,
+      "specialization": "Mental Health Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 7,
+      "name": "Carlos Alberto Vargas Gutierrez",
+      "yearsOfExperience": 18,
+      "specialization": "Health Insurance Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 8,
+      "name": "Luz Marina Velasquez Diaz",
+      "yearsOfExperience": 11,
+      "specialization": "Medical Device Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 9,
+      "name": "Gonzalo Paredes Silva",
+      "yearsOfExperience": 14,
+      "specialization": "Bioethics Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
+    },
+    {
+      "id": 10,
+      "name": "Ana Sofia Castillo Mendoza",
+      "yearsOfExperience": 9,
+      "specialization": "Health Regulation Law",
+      "urlToImage": "https://img.freepik.com/fotos-premium/hombre-asiatico-indio-vestido-estilo-esta-pie-calle-dia-lleva-traje-3-piezas-zapatos-moda-bolsillo-cuadrado-pendientes-sostiene-bolsa-gimnasia-mano_396607-57297.jpg?w=900"
+
     }
   ]
 }

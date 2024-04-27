@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'frontend-app';
+  title = 'MedicDefense';
+  options = [
+    { path: '/abogados', title: 'Abogados'},
+    { path: '/resumen', title: 'Resumen'},
+    { path: '/suscripcion', title: 'Suscripcion'},
+    { path: '/perfil', title: 'Perfil'},
+    { path: '/ladingPage', title: 'LandigPage'},
+  ]
 }
+
