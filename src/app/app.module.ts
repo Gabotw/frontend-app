@@ -16,14 +16,14 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
-import {LawyerService} from "./learning/services/lawyer.service";
-import { HomeComponent } from './public/pages/home/home.component';
+import {LawyerService} from "./lawyers/services/lawyer.service";
+import { LawyerListComponent } from './public/pages/lawyer-list/lawyer-list.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    LawyerListComponent,
     PageNotFoundComponent
   ],
   imports: [

@@ -1,0 +1,25 @@
+mat-toolbar {
+  background-color:  #3d3737;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.centered-links a, .right-link {
+  font-size: 23px;
+}
+.right-link {
+  margin-left: auto;
+}
+.logo {
+  height: 80px;
+  width: auto;
+  padding-right: 50px;
+}
+@media (max-width: 600px) {
+  mat-toolbar {
+    flex-direction: column;
+  }
+  .centered-links, .right-link {
+    display: none;
+  }
+
+}
