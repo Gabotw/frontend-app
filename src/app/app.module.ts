@@ -21,7 +21,8 @@ import { LawyerListComponent } from './public/pages/lawyer-list/lawyer-list.comp
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
-import { SuscriptionsComponent } from './public/pages/suscriptions/suscriptions.component';
+import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
+
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { SuscriptionsComponent } from './public/pages/suscriptions/suscriptions.
     LawyerListComponent,
     PageNotFoundComponent,
     LawyerProfileComponent,
-    SuscriptionsComponent,
+    SubscriptionComponent,
   ],
   imports: [
     BrowserModule,
