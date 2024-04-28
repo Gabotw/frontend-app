@@ -4,6 +4,7 @@ import {LawyerListComponent} from "./public/pages/lawyer-list/lawyer-list.compon
 import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-found.component";
 import {ProfileComponent} from "./public/pages/profile/profile.component";
 import {EditProfileComponent} from "./public/pages/edit-profile/edit-profile.component";
+import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'perfil', component:ProfileComponent},
   {path: 'editar-perfil', component:EditProfileComponent},
   { path: '', redirectTo: 'abogados', pathMatch: 'full'},
+  { path: 'suscripcion', component: SubscriptionComponent},
   { path: '**', component: PageNotFoundComponent },
 ];
 

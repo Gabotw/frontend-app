@@ -24,6 +24,8 @@ import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-pr
 import { FooterContentComponent } from './public/components/footer-content/footer-content.component';
 import { ProfileComponent } from './public/pages/profile/profile.component';
 import { EditProfileComponent } from './public/pages/edit-profile/edit-profile.component';
+import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
+import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { EditProfileComponent } from './public/pages/edit-profile/edit-profile.c
     FooterContentComponent,
     ProfileComponent,
     EditProfileComponent,
+    SubscriptionComponent,
+    SubscriptionPayComponent,
   ],
   imports: [
     BrowserModule,
