@@ -22,6 +22,7 @@ import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-fo
 import {MatDialogModule} from "@angular/material/dialog";
 import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
 import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
+import { SubscriptionPayComponent } from './public/pages/subscription-pay/subscription-pay.component';
 
 
 
@@ -32,6 +33,7 @@ import {SubscriptionComponent} from "./public/pages/subscription/subscription.co
     PageNotFoundComponent,
     LawyerProfileComponent,
     SubscriptionComponent,
+    SubscriptionPayComponent,
   ],
   imports: [
     BrowserModule,

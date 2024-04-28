@@ -1,0 +1,28 @@
+.card-pay-container{
+  background-color: #F2C6AC;
+}
+.pay-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-1{
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.pay-title{
+  max-width: 600px;
+  font-size: 20px;
+}
+
+button {
+  background-color: #F29979;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 30px;
+  font-size: 18px;
+}
