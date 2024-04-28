@@ -1,7 +1,7 @@
 .lawyer-card {
   display: flex;
   flex-direction: column;
-  background-color: #F2C6AC;
+  background-color: #A67360;
   box-shadow: 0 4px 8px 0 rgba(0,0, 0, 0.2);
 }
 
@@ -9,10 +9,13 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
+  margin: 20px;
+  background-color: #F2C6AC;
+  border-radius: 20px;
 }
 
 .button-back {
-  background-color: #F29979;
+  background-color: #F2EFDC;
   border-radius: 5px;
 }
 
@@ -20,7 +23,7 @@
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
-  background-color: #A67365;
+  background-color: #F2EFDC;
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0,0, 0, 0.2);
@@ -51,7 +54,7 @@
   padding: 20px;
   flex-wrap: wrap;
   border-radius: 20px;
-  background-color: #A67365;
+  background-color: #F2EFDC;
   box-shadow: 0 4px 8px 0 rgba(0,0, 0, 0.2);
 }
 
