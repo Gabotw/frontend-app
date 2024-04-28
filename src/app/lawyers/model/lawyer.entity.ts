@@ -4,6 +4,10 @@ export class Lawyer {
   yearsOfExperience: number;
   specialization: string;
   urlToImage: string;
+  casesWon: number;
+  price: string;
+  email: string;
+  phoneNumber: string;
 
   constructor() {
     this.id = 0;
@@ -11,6 +15,10 @@ export class Lawyer {
     this.yearsOfExperience = 0;
     this.specialization = '';
     this.urlToImage = '';
+    this.casesWon = 0;
+    this.price = '';
+    this.email = '';
+    this.phoneNumber = '';
   }
 }
 
