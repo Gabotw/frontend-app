@@ -21,6 +21,7 @@ import { LawyerListComponent } from './public/pages/lawyer-list/lawyer-list.comp
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
+import { FooterContentComponent } from './public/components/footer-content/footer-content.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-pr
     LawyerListComponent,
     PageNotFoundComponent,
     LawyerProfileComponent,
+    FooterContentComponent,
   ],
   imports: [
     BrowserModule,
