@@ -3,9 +3,9 @@
   <div class="mat-spacer"></div>
   <div class="centered-links">
     <ng-container *ngFor="let option of options">
-      <a mat-button *ngIf="option.title !== 'LandigPage'" [routerLink]="option.path">{{ option.title }}</a>
+      <a mat-button *ngIf="option.title !== 'LandingPage'" [routerLink]="option.path">{{ option.title }}</a>
     </ng-container>
   </div>
-  <a mat-button [routerLink]="'/ladingPage'" class="right-link">LandigPage</a>
+  <a mat-button href="https://open-source-grupo-testigos-de-jehova.github.io/Landing-page-MedicDefense/" target="_blank" class="right-link">LandingPage</a>
 </mat-toolbar>
 <router-outlet/>
