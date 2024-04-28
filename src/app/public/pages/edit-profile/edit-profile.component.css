@@ -1,81 +1,92 @@
+/* Main layout container for the section with flexbox for alignment */
 .section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Space elements evenly with extra space at the edges */
+    align-items: center; /* Vertically center the content */
     min-height: 100px;
     padding: 20px;
-    background-color: #A67360;
+    background-color: #A67360; /* Earthy tone background */
 }
 
+/* Styling for general content area, using flexbox for layout */
 .content {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-start; /* Align children elements to the start */
+    align-items: flex-start; /* Align children to the top */
     min-height: 100px;
     padding: 20px;
-    background-color: #F2C6AC;
+    background-color: #F2C6AC; /* Lighter tone for content background */
     margin: 20px;
-    flex: 1;
-    flex-direction: column;
-    transition: padding 0.3s ease, margin 0.3s ease; /* Transiciones suaves para el padding y el margen */
+    flex: 1; /* Flex grow to fill available space */
+    flex-direction: column; /* Stack children vertically */
+    transition: padding 0.3s ease, margin 0.3s ease; /* Smooth transitions for padding and margin */
 }
 
-/* Ajustes para tabletas */
+/* Responsive adjustments for very small devices */
 @media (max-width: 320px) {
     .content {
-        padding: 1px;
-        margin: 1px;
+        padding: 1px; /* Minimal padding for tight screen space */
+        margin: 1px; /* Minimal margin to utilize all available space */
     }
 }
+
+/* User info section styled with flexbox for layout control */
 .user-info {
     display: flex;
     align-items: center;
-    justify-content: start; /* Asegúrate de que los elementos estén alineados a la izquierda */
+    justify-content: start; /* Align content to the left */
 }
+
+/* Styling for password groups with flex row to line up elements */
 .password-group {
     display: flex;
-    flex-direction: row; /* Ensures that the children of password-group are in a row */
-    align-items: center; /* Align items in the middle vertically */
-    margin-bottom: 10px; /* Bottom margin for spacing */
-}
-.description {
-    margin-right: 2vw; /* Comienza con un margen definido */
-    flex-shrink: 1; /* Permite que este elemento se encoja si es necesario */
-    transition: margin-right 0.5s ease; /* Mantiene la transición suave */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Center items vertically within the group */
+    margin-bottom: 10px; /* Space below each group */
 }
 
+/* Description section, often containing images or text */
+.description {
+    margin-right: 2vw; /* Responsive horizontal spacing */
+    flex-shrink: 1; /* Allow shrinking to fit in flexible layouts */
+    transition: margin-right 0.5s ease; /* Smooth transition for margin adjustments */
+}
+
+/* Styling for detailed information area */
 .information {
     display: flex;
-    flex-direction: column; /* Cambio aquí para organizar en columnas */
-    flex-shrink: 3; /* Permite que este elemento se encoja más que .description */
-    transition: flex-shrink 0.5s ease; /* Mantiene la transición suave */
+    flex-direction: column; /* Stack children vertically */
+    flex-shrink: 3; /* Allow more shrinking compared to other elements */
+    transition: flex-shrink 0.5s ease; /* Smooth transition for flex property changes */
 }
 
+/* Individual input groups styled with flexbox for alignment */
 .input-group {
     display: flex;
-    flex-direction: row; /* Organiza label e input en la misma fila */
-    align-items: center; /* Alinea verticalmente los elementos */
-    margin-bottom: 10px; /* Espaciado entre grupos */
+    flex-direction: row; /* Arrange label and input side by side */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Add space below each input group */
 }
 
-/* Estilo base para los inputs y labels de la información */
+/* Base styles for input elements within information section */
 .information input {
-    font-size: calc(18px + 0.5vw); /* Tamaño de fuente adaptativo */
-    padding: 6px 10px; /* Padding para mantener la estructura del input */
-    background-color: transparent; /* Hace que el fondo del input sea transparente */
-    border: none; /* Elimina todos los bordes */
-    border-bottom: 2px solid #000; /* Añade un borde solo en la parte inferior */
-    outline: none; /* Elimina el outline al enfocar el input */
-    transition: border-color 0.5s ease; /* Transición suave para el color del borde */
+    font-size: calc(18px + 0.5vw); /* Responsive font size */
+    padding: 6px 10px; /* Padding for clickable area */
+    background-color: transparent; /* No background to blend with form */
+    border: none; /* No borders to keep a clean look */
+    border-bottom: 2px solid #000; /* Underline style for minimalistic design */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.5s ease; /* Smooth transition for border color changes */
 }
 
+/* Label styling within the information section */
 .information label {
-    font-size: calc(20px + 0.5vw);
-    padding: 0px;
-    transition: font-size 0.5s ease, padding 0.5s ease; /* Transiciones suaves para el tamaño de fuente y padding */
+    font-size: calc(20px + 0.5vw); /* Responsive font size */
+    padding: 0px; /* No padding for a tighter layout */
+    transition: font-size 0.5s ease, padding 0.5s ease; /* Smooth transitions for font size and padding */
 }
 
-/* Estilo para la imagen en la sección de la información */
+/* Styling for images within the description area */
 .description img {
     padding: 40px;
     max-height: 275px;
@@ -83,238 +94,227 @@
     max-width: 100%;
     min-width: 50px;
     width: auto;
-    transition: max-height 0.5s ease, padding 0.5s ease, width 0.5s ease; /* Transiciones suaves agregadas para max-height y padding */
+    transition: max-height 0.5s ease, padding 0.5s ease, width 0.5s ease; /* Smooth transitions for resizing images */
 }
 
-/* Media query para pantallas más pequeñas */
+/* Media queries for adjusting styles on smaller screens */
 @media (max-width: 800px) {
     .description img {
-        padding: 20px; /* Reducción del padding para pantallas más pequeñas */
-        max-width: 150px; /* Reducción del ancho máximo para pantallas más pequeñas */
-        transition: padding 0.5s ease, max-width 0.5s ease; /* Asegúrate de que la transición sea suave */
-    }
-}
-@media (max-width: 320px) {
-    .description img {
-        padding: 20px; /* Reducción del padding para pantallas más pequeñas */
-        max-width: 75px; /* Reducción del ancho máximo para pantallas más pequeñas */
-        transition: padding 0.5s ease, max-width 0.5s ease; /* Asegúrate de que la transición sea suave */
+        padding: 20px; /* Reduce padding on smaller screens */
+        max-width: 150px; /* Limit image width on smaller devices */
+        transition: padding 0.5s ease, max-width 0.5s ease; /* Ensure transitions remain smooth */
     }
 }
 
+@media (max-width: 320px) {
+    .description img {
+        padding: 20px; /* Consistent smaller padding for very small screens */
+        max-width: 75px; /* Further reduce image width for small devices */
+        transition: padding 0.5s ease, max-width 0.5s ease; /* Maintain smooth transitions */
+    }
+}
+
+/* Additional responsive adjustments for password area */
 .password input {
-    font-size: calc(20px + 0.5vw); /* Tamaño de fuente adaptativo */
-    padding: 2px 10px; /* Padding para mantener la estructura del input */
-    background-color: transparent; /* Hace que el fondo del input sea transparente */
-    border: none; /* Elimina todos los bordes */
-    border-bottom: 2px solid #000; /* Añade un borde solo en la parte inferior */
-    outline: none; /* Elimina el outline al enfocar el input */
-    transition: border-color 0.5s ease; /* Transición suave para el color del borde */
-    flex: 1 1 auto; /* Flex basis set to auto */
+    font-size: calc(20px + 0.5vw); /* Responsive font size for readability */
+    padding: 2px 10px; /* Sufficient padding for interaction */
+    background-color: transparent; /* Transparent background to blend in */
+    border: none; /* No distracting borders */
+    border-bottom: 2px solid #000; /* Subtle underline for a clean look */
+    outline: none; /* Remove default outline for focus */
+    transition: border-color 0.5s ease; /* Smooth transition for visual feedback */
+    flex: 1 1 auto; /* Flexibility in growing and shrinking */
 }
 
 .password label {
     font-size: calc(18px + 0.5vw);
     padding: 0px;
-    transition: font-size 0.5s ease, padding 0.5s ease; /* Smooth transitions for font size and padding */
-    flex: 1 1 auto; /* Flex basis set to auto */
+    transition: font-size 0.5s ease, padding 0.5s ease; /* Smooth transitions for adaptive responsiveness */
+    flex: 1 1 auto; /* Maintain size flexibility */
 }
+
 @media (max-width: 1000px) {
-    .password{
-        flex-direction: column;
-        margin-right: calc(20px); /* Uso de calc() para un margen más dinámico */
-        transition: margin-right 0.5s ease; /* Transición suave para margin-right */
-    }
-    .password label {
-        font-size: calc(16px); /* Tamaño de fuente reducido para dispositivos medianos */
-        transition: font-size 0.5s ease; /* Transición suave para font-size */
-        width: auto; /* Allows label and input to size according to content */
-    }
-    .password input {
-        font-size: calc(12px); /* Tamaño de fuente reducido para dispositivos medianos */
-        transition: font-size 0.5s ease; /* Transición suave para font-size */
-        width: auto; /* Allows label and input to size according to content */
+    .password {
+        flex-direction: column; /* Stack elements vertically on medium screens */
+        margin-right: calc(20px); /* Dynamic right margin using calc() */
+        transition: margin-right 0.5s ease; /* Smooth margin adjustment */
     }
 }
 
+/* Further adjustments for very small screens */
 @media (max-width: 600px) {
     .password-group {
-        display: flex;
-        flex-direction: row; /* Organiza label e input en la misma fila */
-        margin-bottom: 10px; /* Espaciado entre grupos */
+        flex-direction: row; /* Maintain row layout even on small screens */
+        margin-bottom: 10px; /* Consistent spacing for usability */
     }
-    .password{
-        margin-right: calc(1px); /* Uso de calc() para un margen más dinámico */
-        transition: margin-right 0.5s ease; /* Transición suave para margin-right */
-        flex-direction: column;
-    }
-    .password input {
-        font-size: 10px; /* Even smaller font size for tiny devices */
-        padding: 1px 1px; /* Reduced padding for a smaller input box */
-        width: auto; /* Allows label and input to size according to content */
-
-    }
-    .password label {
-        font-size: 10px; /* Reduced font size for labels to match the input size */
-        width: auto; /* Allows label and input to size according to content */
-        margin: 5px 0; /* Only vertical margin */
+    .password {
+        margin-right: calc(1px); /* Minimal margin for tight spaces */
+        transition: margin-right 0.5s ease; /* Keep transitions smooth */
+        flex-direction: column; /* Vertical stacking for better layout */
     }
 }
+
+/* Responsive adjustments for password and information sections on smaller devices */
 @media (max-width: 900px) {
     .description {
-        margin-right: calc(20px); /* Uso de calc() para un margen más dinámico */
-        transition: margin-right 0.5s ease; /* Transición suave para margin-right */
+        margin-right: calc(20px); /* Dynamic adjustment for margin */
+        transition: margin-right 0.5s ease; /* Smooth transition for margin changes */
     }
-    .information label{
-        font-size: calc(12px); /* Tamaño de fuente reducido para dispositivos medianos */
-        transition: font-size 0.5s ease; /* Transición suave para font-size */
+    .information label {
+        font-size: calc(12px); /* Reduced font size for medium screens */
+        transition: font-size 0.5s ease; /* Smooth font size transition */
     }
     .information input {
-        font-size: calc(10px); /* Tamaño de fuente reducido para dispositivos medianos */
-        transition: font-size 0.5s ease; /* Transición suave para font-size */
+        font-size: calc(10px); /* Smaller font size for compact areas */
+        transition: font-size 0.5s ease; /* Maintain smooth font transitions */
     }
 }
+
 @media (max-width: 320px) {
     .description {
-        margin-right: calc(1px); /* Uso de calc() para un margen más dinámico */
-        transition: margin-right 0.5s ease; /* Transición suave para margin-right */
+        margin-right: calc(1px); /* Minimal margin for very small screens */
+        transition: margin-right 0.5s ease; /* Ensure smooth margin transitions */
     }
     .information input {
-        font-size: 10px; /* Even smaller font size for tiny devices */
-        padding: 1px 4px; /* Reduced padding for a smaller input box */
-        width: 100px; /* Reduced height to make the input box smaller */
+        font-size: 10px; /* Very small font size for tiny devices */
+        padding: 1px 4px; /* Reduced padding for smaller form factor */
+        width: 100px; /* Adjusted width for better layout */
     }
-
     .information label {
-        font-size: 10px; /* Reduced font size for labels to match the input size */
+        font-size: 10px; /* Matched font size for consistency with inputs */
     }
 }
 
+/* General styles for password section with flexibility */
 .password {
-    transition: margin-bottom 0.3s ease; /* Transición suave para el margen inferior */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
+    transition: margin-bottom 0.3s ease; /* Smooth transition for bottom margin adjustments */
+    flex-wrap: wrap; /* Allow wrapping of elements if necessary */
 }
 
+/* Styling for information row with responsive margin adjustments */
 .info-row {
     display: flex;
-    justify-content: space-between;
-    margin-left: 40px;
-    transition: margin-left 0.3s ease; /* Transición suave para el margen izquierdo */
+    justify-content: space-between; /* Space children evenly across the row */
+    margin-left: 40px; /* Left margin for alignment */
+    transition: margin-left 0.3s ease; /* Smooth transition for left margin adjustments */
 }
 
 @media (max-width: 800px) {
     .info-row {
-        margin-left: 20px; /* Margen izquierdo reducido para pantallas medianas */
+        margin-left: 20px; /* Reduced left margin for smaller screens */
     }
-
 }
+
+/* Button styling within .buttons container for uniform appearance and alignment */
 .buttons {
-    margin: 5px; /* Uniform margin to maintain layout consistency */
+    margin: 5px; /* Uniform margin for consistent layout */
     display: flex;
-    align-items: center; /* Align items in the middle vertically */
-    justify-content: center; /* Keep buttons centered horizontally */
+    align-items: center; /* Vertically align buttons in the middle */
+    justify-content: center; /* Horizontally center buttons */
     width: 100%;
-    transition: justify-content 0.3s ease, margin 0.3s ease; /* Smooth transitions */
+    transition: justify-content 0.3s ease, margin 0.3s ease; /* Smooth transitions for layout adjustments */
 }
 
 .buttons button, .buttons a {
-    font-weight:bold;
+    font-weight: bold;
     border-radius: 20px;
-    background-color: #F29979;
+    background-color: #F29979; /* Warm background color for visual appeal */
     color: black;
     padding: 10px 40px;
-    font-size: 18px; /* Slightly reduced for better fit on small screens */
+    font-size: 18px; /* Responsive font size */
     border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease;
-    margin: 10px; /* Consistent margin for spacing between buttons */
+    cursor: pointer; /* Cursor indicates clickable elements */
+    transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease; /* Smooth transitions for visual feedback */
+    margin: 10px; /* Consistent spacing around buttons */
 }
+
 @media (max-width: 900px) {
     .buttons {
-        justify-content: center; /* Ensure buttons remain centered */
-        margin: 10px 0; /* Reduced vertical margin for smaller screens */
+        justify-content: center; /* Center buttons for consistent layout */
+        margin: 10px 0; /* Adjust vertical spacing for tighter screens */
     }
 
     .buttons button, .buttons a {
-        padding: 5px; /* Adjusted padding for smaller width */
-        font-size: 10px; /* Larger font size than 8px for legibility */
+        padding: 5px; /* Adjusted padding for smaller elements */
+        font-size: 10px; /* Slightly larger font size for legibility */
     }
 }
 
 @media (max-width: 400px) {
     .buttons {
-        justify-content: center; /* Ensure buttons remain centered */
-        margin: 20px 0; /* Reduced vertical margin for smaller screens */
+        justify-content: center; /* Ensure buttons remain centered on very small screens */
+        margin: 20px 0; /* Adjusted vertical margin for layout consistency */
     }
 
     .buttons button, .buttons a {
-        padding: 5px; /* Adjusted padding for smaller width */
-        font-size: 8px; /* Larger font size than 8px for legibility */
+        padding: 5px; /* Reduced padding for compact layout */
+        font-size: 8px; /* Smaller font size for tight spaces */
     }
 }
 
 .buttons button:hover, .buttons a:hover {
-    background-color: #B7725B; /* Change background color on hover */
-    color: white; /* Change text color to white on hover */
+    background-color: #B7725B; /* Darker shade on hover for visual feedback */
+    color: white; /* Text color change for better readability on hover */
 }
+
+/* Styling for the submit section with flexbox for alignment */
 .submit {
     display: flex;
     align-items: center;
-    justify-content: start; /* Align items to the start of the container */
+    justify-content: start; /* Align children to the start for visual consistency */
     padding: 20px;
-    transition: padding 0.3s ease; /* Smooth transition for padding changes */
-    box-sizing: border-box;
-    flex-wrap: wrap; /* Allows elements to wrap onto the next line if necessary */
+    transition: padding 0.3s ease; /* Smooth transition for padding adjustments */
+    box-sizing: border-box; /* Include padding and border in the element's size */
+    flex-wrap: wrap; /* Allow children to wrap in tight spaces */
 }
 
 .submit #upload-btn {
     cursor: pointer;
-    background-color: #F2EFDC;
-    border: 1px solid #F2EFDC;
+    background-color: #F2EFDC; /* Neutral background color for button */
+    border: 1px solid #F2EFDC; /* Matching border to maintain seamless style */
     border-radius: 4px;
-    font-size: 2rem; /* Initial font size */
-    padding: 10px 5px; /* Initial padding */
-    transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
-    flex: 0 0 auto; /* Do not grow or shrink */
+    font-size: 2rem; /* Initial large font size for clear visibility */
+    padding: 10px 5px; /* Sufficient padding for button aesthetics */
+    transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Smooth transitions for button properties */
+    flex: 0 0 auto; /* Flex sizing to prevent growth or shrinkage */
     margin-right: 20px;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent text wrapping within the button */
 }
 
 .submit #file-name {
-    font-size: 1.5rem;
-    white-space: nowrap;
-    margin-left: 10px;
-
+    font-size: 1.5rem; /* Medium font size for readability */
+    white-space: nowrap; /* Keep file name in a single line */
+    margin-left: 10px; /* Space between button and file name label */
 }
 
-/* Smaller screens: reduce font size and padding of the button */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .submit #upload-btn {
-        font-size: 0.6rem;
-        padding: 8px 5px;
+        font-size: 0.6rem; /* Smaller font size for compact areas */
+        padding: 8px 5px; /* Adjusted padding for smaller button size */
     }
 
     .submit #file-name {
-        font-size: 0.5rem;
+        font-size: 0.5rem; /* Smaller font size to match compact layout */
     }
 }
 
-/* Even smaller screens: further reduce sizes and stack elements */
+/* Further adjustments for very small screens */
 @media (max-width: 480px) {
     .submit {
-        flex-direction: column;
-        align-items: stretch; /* Stretch children to fit the container */
-        padding: 10px;
+        flex-direction: column; /* Stack elements vertically for better space management */
+        align-items: stretch; /* Stretch children to fit the width of the container */
+        padding: 10px; /* Reduced padding for tighter layout */
     }
 
     .submit #upload-btn {
-        font-size: 0.6rem;
-        padding: 6px 5px;
-        width: auto; /* Allow button to adjust based on content */
+        font-size: 0.6rem; /* Maintain smaller font size for consistency */
+        padding: 6px 5px; /* Further reduced padding for tighter fit */
+        width: auto; /* Allow button to adjust based on content width */
         margin-bottom: 5px; /* Space between button and file name when stacked */
     }
 
     .submit #file-name {
-        font-size: 0.5rem;
+        font-size: 0.5rem; /* Match font size with button for uniform appearance */
     }
 }

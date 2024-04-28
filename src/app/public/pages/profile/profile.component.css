@@ -1,196 +1,212 @@
+/* Base styles for the main section with flex display */
 .section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100px;
-  padding: 20px;
-  background-color: #A67360;
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center; /* Vertically centers items in the section */
+  min-height: 100px; /* Ensures section is at least 100px tall */
+  padding: 20px; /* Provides padding around the content */
+  background-color: #A67360; /* Sets a distinctive background color */
 }
 
+/* Styles for the content area within the section */
 .content {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-start; /* Aligns children elements to the start */
+  align-items: flex-start; /* Aligns children elements to the top */
   min-height: 100px;
-  padding: 22.5px;
-  background-color: #F2C6AC;
-  margin: 20px;
-  flex: 1;
-  flex-direction: column;
-  transition: padding 0.3s ease, margin 0.3s ease; /* Transiciones suaves para el padding y el margen */
+  padding: 22.5px; /* Slightly increased padding for better spacing */
+  background-color: #F2C6AC; /* Lighter background color for contrast */
+  margin: 20px; /* Margin around the content for separation */
+  flex: 1; /* Allows the content to expand to fill the available space */
+  flex-direction: column; /* Stacks children vertically */
+  transition: padding 0.3s ease, margin 0.3s ease; /* Smooth transition for padding and margin changes */
 }
 
-/* Ajustes para tabletas */
+/* Responsive adjustments for smaller devices */
 @media (max-width: 320px) {
   .content {
-    padding: 1px;
-    margin: 1px;
+    padding: 1px; /* Minimal padding on small devices */
+    margin: 1px; /* Minimal margin to maximize space */
   }
 }
 
+/* User information section with flexbox for layout */
 .user-info {
   display: flex;
   align-items: center;
-  justify-content: start; /* Asegúrate de que los elementos estén alineados a la izquierda */
+  justify-content: start; /* Ensures alignment is to the left */
 }
 
+/* Description block with defined right margin */
 .description {
-  margin-right: 2vw; /* Comienza con un margen definido */
-  flex-shrink: 1; /* Permite que este elemento se encoja si es necesario */
-  transition: margin-right 0.5s ease; /* Mantiene la transición suave */
+  margin-right: 2vw; /* Responsive right margin based on viewport width */
+  flex-shrink: 1; /* Allows the element to shrink if necessary */
+  transition: margin-right 0.5s ease; /* Smooth transition for margin changes */
 }
 
+/* Information block allowing more shrinking than the description */
 .information {
-  flex-shrink: 3; /* Permite que este elemento se encoja más que .description */
-  transition: margin-right 0.5s ease; /* Mantiene la transición suave */
+  flex-shrink: 3; /* Allows significant shrinking relative to other elements */
+  transition: margin-right 0.5s ease; /* Smooth transition, although might be misused here */
 }
 
+/* Further responsive adjustments for the description's right margin */
 @media (max-width: 600px) {
   .description {
-    margin-right: 1vw; /* Reduce el margen en pantallas pequeñas */
+    margin-right: 1vw; /* Reduces right margin on small screens */
   }
 }
 
 @media (max-width: 400px) {
   .description {
-    margin-right: 0.5vw; /* Reduce aún más el margen para pantallas muy pequeñas */
+    margin-right: 0.5vw; /* Even smaller right margin for very small screens */
   }
 }
 
-/* Estilo para la imagen en la sección de la información */
+/* Styles for images within the description area */
 .description img {
   padding: 40px;
-  max-height: 275px;
+  max-height: 275px; /* Maximum height for images */
   height: auto;
-  max-width: 100%;
-  min-width: 50px;
+  max-width: 100%; /* Images cannot exceed container width */
+  min-width: 50px; /* Minimum width for images */
   width: auto;
-  transition: max-height 0.5s ease, padding 0.5s ease, width 0.5s ease; /* Transiciones suaves agregadas para max-height y padding */
+  transition: max-height 0.5s ease, padding 0.5s ease, width 0.5s ease; /* Smooth transitions for resizing */
 }
 
-/* Media query para pantallas más pequeñas */
+/* Responsive image styles for smaller screens */
 @media (max-width: 800px) {
   .description img {
-    padding: 20px; /* Reducción del padding para pantallas más pequeñas */
-    max-width: 150px; /* Reducción del ancho máximo para pantallas más pequeñas */
-    transition: padding 0.5s ease, max-width 0.5s ease; /* Asegúrate de que la transición sea suave */
-  }
-}
-@media (max-width: 320px) {
-  .description img {
-    padding: 20px; /* Reducción del padding para pantallas más pequeñas */
-    max-width: 75px; /* Reducción del ancho máximo para pantallas más pequeñas */
-    transition: padding 0.5s ease, max-width 0.5s ease; /* Asegúrate de que la transición sea suave */
+    padding: 20px; /* Reduced padding */
+    max-width: 150px; /* Smaller max-width for smaller screens */
+    transition: padding 0.5s ease, max-width 0.5s ease; /* Smooth transitions for these properties */
   }
 }
 
-/* Estilo base para el texto de la información */
+@media (max-width: 320px) {
+  .description img {
+    padding: 20px; /* Consistent with above, could be optimized */
+    max-width: 75px; /* Much smaller width for very small devices */
+    transition: padding 0.5s ease, max-width 0.5s ease; /* Ensures transitions remain smooth */
+  }
+}
+
+/* Base styles for text within the information section */
 .information p {
-  font-size: calc(28px + 0.5vw);
-  padding: 10px;
-  transition: font-size 0.5s ease, padding 0.5s ease; /* Transición suave para font-size y padding */
+  font-size: calc(28px + 0.5vw); /* Responsive font size calculation */
+  padding: 10px; /* Padding around text for better readability */
+  transition: font-size 0.5s ease, padding 0.5s ease; /* Smooth transitions for font size and padding */
 }
 
-/* Media query para dispositivos más pequeños */
+/* Media queries for adjusting margin and font size dynamically */
 @media (max-width: 800px) {
   .description {
-    margin-right: calc(20px); /* Uso de calc() para un margen más dinámico */
-    transition: margin-right 0.5s ease; /* Transición suave para margin-right */
+    margin-right: calc(20px); /* Dynamic margin calculation for medium screens */
+    transition: margin-right 0.5s ease; /* Smooth transition for margin-right */
   }
   .information p {
-    font-size: calc(14px + 0.5vw); /* Tamaño de fuente reducido para dispositivos medianos */
-    padding: 0px;
-    transition: font-size 0.5s ease; /* Transición suave para font-size */
+    font-size: calc(14px + 0.5vw); /* Smaller font size for medium devices */
+    padding: 0px; /* Removes padding for tighter layout */
+    transition: font-size 0.5s ease; /* Smooth transition for font size changes */
   }
 }
+
 @media (max-width: 320px) {
   .description {
-    margin-right: calc(1px); /* Uso de calc() para un margen más dinámico */
-    transition: margin-right 0.5s ease; /* Transición suave para margin-right */
+    margin-right: calc(1px); /* Minimal margin for small devices */
+    transition: margin-right 0.5s ease; /* Ensures smooth margin changes */
   }
   .information p {
-    font-size: calc(9px + 0.5vw); /* Tamaño de fuente reducido para dispositivos medianos */
-    padding: 0px;
-    transition: font-size 0.5s ease; /* Transición suave para font-size */
+    font-size: calc(9px + 0.5vw); /* Very small font size for very small screens */
+    padding: 0px; /* No padding for a compact appearance */
+    transition: font-size 0.5s ease; /* Smooth transitions maintained */
   }
 }
 
+/* Styling for consultation details with margin adjustments */
 .consultations {
-  margin-bottom: 2px;
-  transition: margin-bottom 0.3s ease; /* Transición suave para el margen inferior */
+  margin-bottom: 2px; /* Small bottom margin */
+  transition: margin-bottom 0.3s ease; /* Smooth transition for bottom margin adjustments */
 }
 
+/* Flexbox layout for info row with responsive margin adjustments */
 .info-row {
   display: flex;
-  justify-content: space-between;
-  margin-left: 40px;
-  transition: margin-left 0.3s ease; /* Transición suave para el margen izquierdo */
+  justify-content: space-between; /* Distributes space evenly between children */
+  margin-left: 40px; /* Left margin for alignment */
+  transition: margin-left 0.3s ease; /* Smooth transition for left margin adjustments */
 }
 
+/* Styles for text in consultations and subscriptions sections */
 .consultations p,
 .suscriptions p {
-  padding-right: 100px;
-  font-size: calc(24px + 0.5vw);
-  transition: padding-right 0.3s ease, font-size 0.3s ease; /* Transiciones suaves para el padding derecho y el tamaño de fuente */
+  padding-right: 100px; /* Right padding for text separation */
+  font-size: calc(24px + 0.5vw); /* Responsive font size calculation */
+  transition: padding-right 0.3s ease, font-size 0.3s ease; /* Smooth transitions for padding and font size */
 }
 
+/* Adjustments for smaller screens */
 @media (max-width: 800px) {
   .info-row {
-    margin-left: 20px; /* Margen izquierdo reducido para pantallas medianas */
+    margin-left: 20px; /* Reduced left margin for medium screens */
   }
 
   .consultations p,
   .suscriptions p {
-    padding-right: 50px; /* Padding derecho reducido para pantallas medianas */
-    font-size: calc(12px + 0.5vw); /* Tamaño de fuente reducido para pantallas medianas */
+    padding-right: 50px; /* Reduced right padding */
+    font-size: calc(12px + 0.5vw); /* Smaller font size for medium screens */
   }
 }
+
+/* Button styling for consistent layout and interaction feedback */
 .buttons {
   margin: 38px; /* Uniform margin to maintain layout consistency */
   display: flex;
-  align-items: center; /* Align items in the middle vertically */
-  justify-content: center; /* Keep buttons centered horizontally */
+  align-items: center; /* Vertically centers items */
+  justify-content: center; /* Horizontally centers items */
   width: 100%;
-  transition: justify-content 0.3s ease, margin 0.3s ease; /* Smooth transitions */
+  transition: justify-content 0.3s ease, margin 0.3s ease; /* Smooth transitions for layout adjustments */
 }
 
 .buttons button, .buttons a {
-  font-weight:bold;
-  border-radius: 20px;
-  background-color: #F29979;
-  color: black;
-  padding: 10px 40px;
-  font-size: 18px; /* Slightly reduced for better fit on small screens */
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease;
-  margin: 10px; /* Consistent margin for spacing between buttons */
+  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 20px; /* Rounded corners for buttons */
+  background-color: #F29979; /* Distinctive background color */
+  color: black; /* Text color for contrast */
+  padding: 10px 40px; /* Padding for size and comfort */
+  font-size: 18px; /* Appropriately sized text for readability */
+  border: none; /* No border for a clean look */
+  cursor: pointer; /* Cursor change to indicate clickable */
+  transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease; /* Smooth transitions for interactive feedback */
+  margin: 10px; /* Space around buttons for separation */
 }
+
+/* Responsive adjustments for buttons on smaller screens */
 @media (max-width: 900px) {
   .buttons {
-    justify-content: center; /* Ensure buttons remain centered */
-    margin: 10px 0; /* Reduced vertical margin for smaller screens */
+    justify-content: center; /* Ensures buttons remain centered */
+    margin: 10px 0; /* Reduced vertical margin for tighter spaces */
   }
 
   .buttons button, .buttons a {
-    padding: 5px; /* Adjusted padding for smaller width */
-    font-size: 10px; /* Larger font size than 8px for legibility */
+    padding: 5px; /* Reduced padding for smaller buttons */
+    font-size: 10px; /* Smaller font size for compact layout */
   }
 }
 
 @media (max-width: 400px) {
   .buttons {
-    justify-content: center; /* Ensure buttons remain centered */
-    margin: 20px 0; /* Reduced vertical margin for smaller screens */
+    justify-content: center; /* Continues to ensure center alignment */
+    margin: 20px 0; /* Increased vertical margin for clear separation */
   }
 
   .buttons button, .buttons a {
-    padding: 5px; /* Adjusted padding for smaller width */
-    font-size: 8px; /* Larger font size than 8px for legibility */
+    padding: 5px; /* Consistent padding for smallest screens */
+    font-size: 8px; /* Very small font size for tiny interfaces */
   }
 }
 
 .buttons button:hover, .buttons a:hover {
-  background-color: #B7725B; /* Change background color on hover */
-  color: white; /* Change text color to white on hover */
+  background-color: #B7725B; /* Darker color on hover for visual feedback */
+  color: white; /* Text color change to white for contrast */
 }

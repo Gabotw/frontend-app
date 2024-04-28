@@ -1,12 +1,15 @@
 <main>
+  <!-- Main container for user profile information -->
   <div class="section">
     <div class="content">
+      <!-- User information section -->
       <div class="user-info">
-        <!-- Aquí va la imagen y la información del usuario -->
+        <!-- User image and basic information displayed here -->
         <div class="description">
           <img src="/assets/img/User.png" alt="User">
         </div>
         <div class="information">
+          <!-- User details displayed as paragraphs -->
           <p>Usuario: GabMedicoPrueba</p>
           <p>Nombres: Gabriel Stefano</p>
           <p>Apellidos: Garcia Rodriguez</p>
@@ -14,19 +17,26 @@
           <p>DNI: 2324234</p>
         </div>
       </div>
+      <!-- Row for displaying additional user details like consultations and subscriptions -->
       <div class="info-row">
         <div class="consultations">
+          <!-- Information about the user's consultations -->
           <p>Consultas realizadas: 10</p>
           <p>Servicios pagados: 1</p>
         </div>
         <div class="suscriptions">
+          <!-- Subscription details -->
           <p>Suscripciones pagadas: 1</p>
           <p>Estado: Médico certificado</p>
         </div>
       </div>
+      <!-- Action buttons for user profile management -->
       <div class="buttons">
+        <!-- Button for editing profile -->
         <a mat-button href="/editar-perfil" (click)="selectLink('/editar-perfil')" [ngClass]="{ 'active': selectedLink === '/editar-perfil' }">Editar Perfil</a>
+        <!-- Button for logging out -->
         <a mat-button href="" (click)="selectLink('')" [ngClass]="{ 'active': selectedLink === '' }">Cerrar Sesión</a>
+        <!-- Button for account deletion -->
         <a mat-button href="" (click)="selectLink('')" [ngClass]="{ 'active': selectedLink === '' }">Borrar Cuenta</a>
       </div>
     </div>
