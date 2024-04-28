@@ -1,0 +1,28 @@
+<mat-card *ngIf="lawyer" class="lawyer-card">
+  <mat-card-header>
+    <mat-card-actions>
+      <button mat-button class="button-back"(click)="closeDialog()">Cerrar</button>
+    </mat-card-actions>
+  </mat-card-header>
+  <div class="card-content">
+    <div class="card-upper">
+      <div class="card-image">
+        <img mat-card-image [src]="lawyer.urlToImage" alt="Lawyer Picture">
+      </div>
+      <div class="card-details">
+        <mat-card-title>{{lawyer.name}}</mat-card-title>
+        <p>Especialidad: {{lawyer.specialization}}</p>
+        <p>Años de experiencia: {{lawyer.yearsOfExperience}}</p>
+        <p>Casos ganados: {{lawyer.casesWon}}</p>
+        <p>Precio: {{lawyer.price}}</p>
+      </div>
+    </div>
+    <div class="card-lower">
+      <h2>Información de contacto:</h2>
+      <div class="contact-info">
+        <p>Teléfono: {{lawyer.phoneNumber}}</p>
+        <p>Email: {{lawyer.email}}</p>
+      </div>
+    </div>
+  </div>
+</mat-card>

@@ -20,6 +20,7 @@ import {LawyerService} from "./lawyers/services/lawyer.service";
 import { LawyerListComponent } from './public/pages/lawyer-list/lawyer-list.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     AppComponent,
     LawyerListComponent,
     PageNotFoundComponent,
+    LawyerProfileComponent,
   ],
   imports: [
     BrowserModule,
