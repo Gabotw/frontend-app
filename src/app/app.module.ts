@@ -23,6 +23,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
 import { FooterContentComponent } from './public/components/footer-content/footer-content.component';
 import { ProfileComponent } from './public/pages/profile/profile.component';
+import { EditProfileComponent } from './public/pages/edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ProfileComponent } from './public/pages/profile/profile.component';
     LawyerProfileComponent,
     FooterContentComponent,
     ProfileComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,

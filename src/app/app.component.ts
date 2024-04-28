@@ -12,6 +12,7 @@ export class AppComponent {
     { path: '/resumen', title: 'Resumen'},
     { path: '/suscripcion', title: 'Suscripcion'},
     { path: '/perfil', title: 'Perfil'},
+    { path: '/editar-perfil'},
     { path: '/ladingPage', title: 'LandigPage'},
   ]
 }
