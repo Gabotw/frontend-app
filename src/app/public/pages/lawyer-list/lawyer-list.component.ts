@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Lawyer} from "../../../lawyers/model/lawyer.entity";
 import {LawyerService} from "../../../lawyers/services/lawyer.service";
-
+import { LawyerProfileComponent } from '../../../lawyers/pages/lawyer-profile/lawyer-profile.component';
+import { MatDialog} from "@angular/material/dialog";
 
 
 
@@ -15,7 +16,7 @@ export class LawyerListComponent implements OnInit {
   filteredLawyers: Lawyer[] = [];
   searchTerm: string = '';
 
-  constructor(private lawyerService: LawyerService) { }
+  constructor(private lawyerService: LawyerService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.lawyerService.getAll().subscribe((lawyers) => {
@@ -31,5 +32,11 @@ export class LawyerListComponent implements OnInit {
     } else {
       this.filteredLawyers = this.lawyers;
     }
+  }
+
+  openDialog(lawyerId: number){
+    const dialogRef = this.dialog.open(LawyerProfileComponent, {
+      data: { id: lawyerId }
+    });
   }
 }

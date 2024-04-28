@@ -19,12 +19,16 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {LawyerService} from "./lawyers/services/lawyer.service";
 import { LawyerListComponent } from './public/pages/lawyer-list/lawyer-list.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LawyerListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LawyerProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,8 @@ import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-fo
     MatPaginatorModule,
     MatToolbarModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [
     provideAnimationsAsync(),
