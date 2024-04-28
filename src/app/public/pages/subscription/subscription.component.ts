@@ -12,6 +12,6 @@ export class SubscriptionComponent {
   constructor(public dialog: MatDialog) {  }
 
   openDialog(){
-    const dialogRef = this.dialog.open(SubscriptionPayComponent);
+    this.dialog.open(SubscriptionPayComponent);
   }
 }
