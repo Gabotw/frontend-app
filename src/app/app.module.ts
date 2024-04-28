@@ -21,9 +21,9 @@ import { LawyerListComponent } from './public/pages/lawyer-list/lawyer-list.comp
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
-import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
-import { SubscriptionPayComponent } from './public/pages/subscription-pay/subscription-pay.component';
-
+import { FooterContentComponent } from './public/components/footer-content/footer-content.component';
+import { ProfileComponent } from './public/pages/profile/profile.component';
+import { EditProfileComponent } from './public/pages/edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -32,8 +32,9 @@ import { SubscriptionPayComponent } from './public/pages/subscription-pay/subscr
     LawyerListComponent,
     PageNotFoundComponent,
     LawyerProfileComponent,
-    SubscriptionComponent,
-    SubscriptionPayComponent,
+    FooterContentComponent,
+    ProfileComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +52,7 @@ import { SubscriptionPayComponent } from './public/pages/subscription-pay/subscr
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [
     provideAnimationsAsync(),
