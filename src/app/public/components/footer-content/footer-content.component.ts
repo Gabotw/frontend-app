@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-footer-content',
-  standalone: true,
-  imports: [],
   templateUrl: './footer-content.component.html',
   styleUrl: './footer-content.component.css'
 })
-export class FooterContentComponent {
+export class FooterContentComponent implements OnInit{
+constructor() {
+}
 
+  ngOnInit(): void {
+  }
 }

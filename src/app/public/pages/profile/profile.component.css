@@ -1,0 +1,196 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  padding: 20px;
+  background-color: #A67360;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100px;
+  padding: 22.5px;
+  background-color: #F2C6AC;
+  margin: 20px;
+  flex: 1;
+  flex-direction: column;
+  transition: padding 0.3s ease, margin 0.3s ease; /* Transiciones suaves para el padding y el margen */
+}
+
+/* Ajustes para tabletas */
+@media (max-width: 320px) {
+  .content {
+    padding: 1px;
+    margin: 1px;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: start; /* Asegúrate de que los elementos estén alineados a la izquierda */
+}
+
+.description {
+  margin-right: 2vw; /* Comienza con un margen definido */
+  flex-shrink: 1; /* Permite que este elemento se encoja si es necesario */
+  transition: margin-right 0.5s ease; /* Mantiene la transición suave */
+}
+
+.information {
+  flex-shrink: 3; /* Permite que este elemento se encoja más que .description */
+  transition: margin-right 0.5s ease; /* Mantiene la transición suave */
+}
+
+@media (max-width: 600px) {
+  .description {
+    margin-right: 1vw; /* Reduce el margen en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 400px) {
+  .description {
+    margin-right: 0.5vw; /* Reduce aún más el margen para pantallas muy pequeñas */
+  }
+}
+
+/* Estilo para la imagen en la sección de la información */
+.description img {
+  padding: 40px;
+  max-height: 275px;
+  height: auto;
+  max-width: 100%;
+  min-width: 50px;
+  width: auto;
+  transition: max-height 0.5s ease, padding 0.5s ease, width 0.5s ease; /* Transiciones suaves agregadas para max-height y padding */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 800px) {
+  .description img {
+    padding: 20px; /* Reducción del padding para pantallas más pequeñas */
+    max-width: 150px; /* Reducción del ancho máximo para pantallas más pequeñas */
+    transition: padding 0.5s ease, max-width 0.5s ease; /* Asegúrate de que la transición sea suave */
+  }
+}
+@media (max-width: 320px) {
+  .description img {
+    padding: 20px; /* Reducción del padding para pantallas más pequeñas */
+    max-width: 75px; /* Reducción del ancho máximo para pantallas más pequeñas */
+    transition: padding 0.5s ease, max-width 0.5s ease; /* Asegúrate de que la transición sea suave */
+  }
+}
+
+/* Estilo base para el texto de la información */
+.information p {
+  font-size: calc(28px + 0.5vw);
+  padding: 10px;
+  transition: font-size 0.5s ease, padding 0.5s ease; /* Transición suave para font-size y padding */
+}
+
+/* Media query para dispositivos más pequeños */
+@media (max-width: 800px) {
+  .description {
+    margin-right: calc(20px); /* Uso de calc() para un margen más dinámico */
+    transition: margin-right 0.5s ease; /* Transición suave para margin-right */
+  }
+  .information p {
+    font-size: calc(14px + 0.5vw); /* Tamaño de fuente reducido para dispositivos medianos */
+    padding: 0px;
+    transition: font-size 0.5s ease; /* Transición suave para font-size */
+  }
+}
+@media (max-width: 320px) {
+  .description {
+    margin-right: calc(1px); /* Uso de calc() para un margen más dinámico */
+    transition: margin-right 0.5s ease; /* Transición suave para margin-right */
+  }
+  .information p {
+    font-size: calc(9px + 0.5vw); /* Tamaño de fuente reducido para dispositivos medianos */
+    padding: 0px;
+    transition: font-size 0.5s ease; /* Transición suave para font-size */
+  }
+}
+
+.consultations {
+  margin-bottom: 2px;
+  transition: margin-bottom 0.3s ease; /* Transición suave para el margen inferior */
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  transition: margin-left 0.3s ease; /* Transición suave para el margen izquierdo */
+}
+
+.consultations p,
+.suscriptions p {
+  padding-right: 100px;
+  font-size: calc(24px + 0.5vw);
+  transition: padding-right 0.3s ease, font-size 0.3s ease; /* Transiciones suaves para el padding derecho y el tamaño de fuente */
+}
+
+@media (max-width: 800px) {
+  .info-row {
+    margin-left: 20px; /* Margen izquierdo reducido para pantallas medianas */
+  }
+
+  .consultations p,
+  .suscriptions p {
+    padding-right: 50px; /* Padding derecho reducido para pantallas medianas */
+    font-size: calc(12px + 0.5vw); /* Tamaño de fuente reducido para pantallas medianas */
+  }
+}
+.buttons {
+  margin: 38px; /* Uniform margin to maintain layout consistency */
+  display: flex;
+  align-items: center; /* Align items in the middle vertically */
+  justify-content: center; /* Keep buttons centered horizontally */
+  width: 100%;
+  transition: justify-content 0.3s ease, margin 0.3s ease; /* Smooth transitions */
+}
+
+.buttons button, .buttons a {
+  font-weight:bold;
+  border-radius: 20px;
+  background-color: #F29979;
+  color: black;
+  padding: 10px 40px;
+  font-size: 18px; /* Slightly reduced for better fit on small screens */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease;
+  margin: 10px; /* Consistent margin for spacing between buttons */
+}
+@media (max-width: 900px) {
+  .buttons {
+    justify-content: center; /* Ensure buttons remain centered */
+    margin: 10px 0; /* Reduced vertical margin for smaller screens */
+  }
+
+  .buttons button, .buttons a {
+    padding: 5px; /* Adjusted padding for smaller width */
+    font-size: 10px; /* Larger font size than 8px for legibility */
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons {
+    justify-content: center; /* Ensure buttons remain centered */
+    margin: 20px 0; /* Reduced vertical margin for smaller screens */
+  }
+
+  .buttons button, .buttons a {
+    padding: 5px; /* Adjusted padding for smaller width */
+    font-size: 8px; /* Larger font size than 8px for legibility */
+  }
+}
+
+.buttons button:hover, .buttons a:hover {
+  background-color: #B7725B; /* Change background color on hover */
+  color: white; /* Change text color to white on hover */
+}

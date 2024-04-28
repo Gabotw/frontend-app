@@ -22,6 +22,7 @@ import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-fo
 import {MatDialogModule} from "@angular/material/dialog";
 import { LawyerProfileComponent } from './lawyers/pages/lawyer-profile/lawyer-profile.component';
 import { FooterContentComponent } from './public/components/footer-content/footer-content.component';
+import { ProfileComponent } from './public/pages/profile/profile.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { FooterContentComponent } from './public/components/footer-content/foote
     PageNotFoundComponent,
     LawyerProfileComponent,
     FooterContentComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { FooterContentComponent } from './public/components/footer-content/foote
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [
     provideAnimationsAsync(),

@@ -1,0 +1,34 @@
+<main>
+  <div class="section">
+    <div class="content">
+      <div class="user-info">
+        <!-- Aquí va la imagen y la información del usuario -->
+        <div class="description">
+          <img src="/assets/img/User.png" alt="User">
+        </div>
+        <div class="information">
+          <p>Usuario: GabMedicoPrueba</p>
+          <p>Nombres: Gabriel Stefano</p>
+          <p>Apellidos: Garcia Rodriguez</p>
+          <p>Correo: {{ 'gabotw@gmail.com' }}</p>
+          <p>DNI: 2324234</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="consultations">
+          <p>Consultas realizadas: 10</p>
+          <p>Servicios pagados: 1</p>
+        </div>
+        <div class="suscriptions">
+          <p>Suscripciones pagadas: 1</p>
+          <p>Estado: Médico certificado</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <a mat-button href="/edit-profile" (click)="selectLink('/edit-profile')" [ngClass]="{ 'active': selectedLink === '/edit-profile' }">Editar Perfil</a>
+        <a mat-button href="" (click)="selectLink('')" [ngClass]="{ 'active': selectedLink === '' }">Cerrar Sesión</a>
+        <a mat-button href="" (click)="selectLink('')" [ngClass]="{ 'active': selectedLink === '' }">Borrar Cuenta</a>
+      </div>
+    </div>
+  </div>
+</main>
