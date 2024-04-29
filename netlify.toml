@@ -1,6 +1,6 @@
 [build]
 command = "ng build --prod"
-publish = "dist/frontend-app"
+publish = "dist/frontend-app/browser"
 
 [dev]
 command = "sh start.sh"
