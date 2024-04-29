@@ -3,6 +3,7 @@ import {Lawyer} from "../../../lawyers/model/lawyer.entity";
 import {LawyerService} from "../../../lawyers/services/lawyer.service";
 import { LawyerProfileComponent } from '../../../lawyers/pages/lawyer-profile/lawyer-profile.component';
 import { MatDialog} from "@angular/material/dialog";
+import {LawyerFilterComponent} from "../lawyer-filter/lawyer-filter.component";
 
 
 
@@ -38,5 +39,9 @@ export class LawyerListComponent implements OnInit {
     const dialogRef = this.dialog.open(LawyerProfileComponent, {
       data: { id: lawyerId }
     });
+  }
+
+  openFilterDialog() {
+    this.dialog.open(LawyerFilterComponent);
   }
 }

@@ -1,0 +1,45 @@
+<mat-card class="filter-container">
+  <mat-card-header class="card-header">
+    <button mat-button class="button-header" (click)="closeDialog()">Volver</button>
+    <button mat-button class="button-header">Restablecer filtros</button>
+    <button mat-button class="button-header">Buscar con estas opciones</button>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="content-1">
+      Ordenar por:
+      <div class="content-buttons-1">
+        <button mat-button class="button-content-1">Nombre</button>
+        <button mat-button class="button-content-1">Años de experiencia</button>
+        <button mat-button class="button-content-1">Casos ganados</button>
+        <button mat-button class="button-content-1">Precio</button>
+      </div>
+    </div>
+    <div class="content-1">
+      Dirección:
+      <div class="direction-buttons">
+        <button mat-button class="button-content-1">Ascendente</button>
+        <button mat-button class="button-content-1">Descendente</button>
+      </div>
+    </div>
+    <div class="age-container">
+      <div class="content-1">
+        Años de experiencia requeridos:
+      </div>
+      <div>
+        <button mat-button class="button-content-1">Mínimo</button>
+        a
+        <button mat-button class="button-content-1">Máximo</button>
+      </div>
+    </div>
+    <div class="price-container">
+      <div class="content-1">
+        Límite de precio habitual:
+      </div>
+      <div>
+        <button mat-button class="button-content-1">Mínimo</button>
+        a
+        <button mat-button class="button-content-1">Máximo</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

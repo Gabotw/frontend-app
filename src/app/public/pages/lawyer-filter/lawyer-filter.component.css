@@ -1,0 +1,55 @@
+.filter-container{
+  background-color: #F2C6AC;
+  display: flex;
+}
+.card-header{
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-header{
+  gap: 10px;
+}
+
+.button-header {
+  background-color: #F29979;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.content-1{
+  font-size: 18px;
+}
+.content-buttons-1{
+  margin: 5px 0;
+}
+
+.button-content-1{
+  background-color: #F2EFDC;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.direction-buttons{
+  margin: 10px 0;
+}
+
+.age-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.price-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
