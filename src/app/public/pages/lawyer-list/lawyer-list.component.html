@@ -1,5 +1,5 @@
 <div class="filter-container">
-  <button mat-raised-button color="primary">Filtros</button>
+  <button mat-raised-button color="primary" (click)="openFilterDialog()">Filtros</button>
   <mat-form-field class="search-field mat-raised-button" color="primary">
     <mat-icon matPrefix>search</mat-icon>
     <input matInput placeholder="Buscar" [(ngModel)]="searchTerm" (input)="search()">
