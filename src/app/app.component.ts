@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'MedicDefense';
   options = [
     { path: '/abogados', title: 'Abogados'},
-    { path: '/resumen', title: 'Resumen'},
+    { path: '/summary', title: 'Resumen'},
     { path: '/suscripcion', title: 'Suscripcion'},
     { path: '/perfil', title: 'Perfil'},
     { path: '/editar-perfil'},

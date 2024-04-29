@@ -26,6 +26,7 @@ import { ProfileComponent } from './public/pages/profile/profile.component';
 import { EditProfileComponent } from './public/pages/edit-profile/edit-profile.component';
 import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
 import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
+import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscrip
     EditProfileComponent,
     SubscriptionComponent,
     SubscriptionPayComponent,
+    SummarySectionComponent,
   ],
   imports: [
     BrowserModule,
