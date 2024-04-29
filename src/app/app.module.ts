@@ -27,6 +27,7 @@ import { EditProfileComponent } from './public/pages/edit-profile/edit-profile.c
 import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
 import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
 import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
+import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { SummarySectionComponent } from './public/pages/summary-section/summary-
     SubscriptionComponent,
     SubscriptionPayComponent,
     SummarySectionComponent,
+    LawyerFilterComponent,
   ],
   imports: [
     BrowserModule,
