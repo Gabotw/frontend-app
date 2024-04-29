@@ -6,6 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
   background-color: #A67360;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 .container {
@@ -13,7 +14,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.main-content {
+  min-height: calc(100vh - 100px);
+}
 
 @media (max-width: 600px) {
   .container {
@@ -32,3 +35,4 @@ body {
     width: 70%;
   }
 }
+
