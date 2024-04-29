@@ -1,5 +1,5 @@
 [build]
-command = "ng build"
+command = "ng serve"
 publish = "dist/frontend-app/browser"
 
 [dev]
