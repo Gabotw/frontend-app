@@ -4,4 +4,4 @@ publish = "dist/frontend-app/browser"
 
 [dev]
 command = "sh start.sh"
-publish = "server/start.sh"
+publish = "server/db.json"
