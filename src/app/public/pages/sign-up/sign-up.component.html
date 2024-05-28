@@ -1,0 +1,62 @@
+<div class="structure">
+  <mat-card class="img-card" style="width: 500px !important; height: 900px">
+    <mat-card-content>
+      <div class="img-container">
+        <img src="assets/img/Logo.png" alt="logo" style="width: 240px;">
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="form-card" style="width: 600px; height: 900px">
+    <mat-card-content>
+      <div class="user-info">
+        <br>
+        <mat-label style="text-align: center; font-size: 30px"><b>Registrate</b></mat-label>
+        <br><br>
+        <mat-label style="text-align: left; font-size: 15px">Ingrese la información solicitada</mat-label>
+        <br>
+
+        <section>
+          <mat-label>¿Ya tiene una cuenta?</mat-label>
+          <button mat-button (click)="goToLogin();">Iniciar Sesión</button>
+        </section>
+        <br>
+        <div class="form-row">
+          <mat-form-field>
+            <input matInput [(ngModel)]="name" placeholder="Nombres">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
+            <input matInput [(ngModel)]="lastName" placeholder="Apellidos">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
+            <input matInput [(ngModel)]="email" placeholder="Correo electrónico">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
+            <input matInput [(ngModel)]="dni" placeholder="dni">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
+            <input matInput [(ngModel)]="password" type="password" placeholder="Contraseña">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
+            <input matInput [(ngModel)]="repeat_password" type="password" placeholder="Repetir contraseña">
+          </mat-form-field>
+        </div>
+        <button mat-button style="color: black; background-color: #F29979" class="submit-button" (click)="register()">Registrar</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="shouldShowToolbar()">
   <img src="../assets/img/Logo.png" alt="Logo" class="logo">
   <div class="mat-spacer"></div>
   <div class="centered-links">
@@ -10,5 +10,5 @@
 </mat-toolbar>
 <router-outlet/>
 <footer>
-  <app-footer-content></app-footer-content>
+  <app-footer-content  *ngIf="shouldShowToolbar()"></app-footer-content>
 </footer>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,12 @@ export class AppComponent {
     { path: '/editar-perfil'},
     { path: '/landingPage', title: 'LandingPage'},
   ]
+  constructor(private router: Router) {}
+  shouldShowToolbar(){
+    return !(this.router.url == '/sign-up' || this.router.url == '/sign-in');
+  }
+  shouldShowFooter(){
+    return this.router.url !== '/sign-up' && this.router.url !== '/sign-in';
+  }
 }
 
