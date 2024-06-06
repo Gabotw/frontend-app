@@ -1,15 +1,15 @@
 <div class="summary-section">
   <mat-card class="card">
     <mat-card-content>
-      <h2>Servicios Legales</h2>
+      <h2>Legal services</h2>
       <div class="lawyer-card" *ngFor="let lawyer of lawyers">
         <div class="card-left">
-          <p>Fecha: {{randomDate()}}</p>
+          <p>Date: {{randomDate()}}</p>
         </div>
         <div class="card-right">
           <h3>{{lawyer.name}}</h3>
-          <p>Costo: {{lawyer.price}}</p>
-          <button mat-button>Revisar</button>
+          <p>Cost: {{lawyer.price}}</p>
+          <button mat-button>Review</button>
         </div>
       </div>
     </mat-card-content>
@@ -17,14 +17,14 @@
   <hr>
   <mat-card class="card">
     <mat-card-content>
-      <h2>Consultas</h2>
+      <h2>Consultations</h2>
       <div class="lawyer-card" *ngFor="let consultation of lawyers">
         <div class="card-left">
-          <p>Fecha: {{randomDate()}}</p>
+          <p>Date: {{randomDate()}}</p>
         </div>
         <div class="card-right">
           <h3>{{consultation.name}}</h3>
-          <button mat-button>Revisar</button>
+          <button mat-button>Review</button>
         </div>
       </div>
     </mat-card-content>

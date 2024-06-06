@@ -1,7 +1,7 @@
 <mat-card *ngIf="lawyer" class="lawyer-card">
   <mat-card-header>
     <mat-card-actions>
-      <button mat-button class="button-back"(click)="closeDialog()">Cerrar</button>
+      <button mat-button class="button-back"(click)="closeDialog()">Cancel</button>
     </mat-card-actions>
   </mat-card-header>
   <div class="card-content">
@@ -11,17 +11,17 @@
       </div>
       <div class="card-details">
         <mat-card-title>{{lawyer.name}}</mat-card-title>
-        <p>Especialidad: {{lawyer.specialization}}</p>
-        <p>Años de experiencia: {{lawyer.yearsOfExperience}}</p>
-        <p>Casos ganados: {{lawyer.casesWon}}</p>
-        <p>Precio: {{lawyer.price}}</p>
+        <p>Specialty: {{lawyer.specialization}}</p>
+        <p>Years of experience: {{lawyer.yearsOfExperience}}</p>
+        <p>Cases won: {{lawyer.casesWon}}</p>
+        <p>Price: {{lawyer.price}}</p>
       </div>
     </div>
     <div class="card-lower">
-      <h2>Información de contacto:</h2>
+      <h2>Contact information:</h2>
       <div class="contact-info">
-        <p>Teléfono: {{lawyer.phoneNumber}}</p>
-        <p>Email: {{lawyer.email}}</p>
+        <p>Phone: {{lawyer.phoneNumber}}</p>
+        <p>E-mail: {{lawyer.email}}</p>
       </div>
     </div>
   </div>

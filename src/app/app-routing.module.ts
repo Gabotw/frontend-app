@@ -9,11 +9,11 @@ import {SummarySectionComponent} from "./public/pages/summary-section/summary-se
 
 
 const routes: Routes = [
-  { path: 'abogados', component: LawyerListComponent },
-  {path: 'perfil', component:ProfileComponent},
-  {path: 'editar-perfil', component:EditProfileComponent},
-  { path: '', redirectTo: 'abogados', pathMatch: 'full'},
-  { path: 'suscripcion', component: SubscriptionComponent},
+  { path: 'Lawyers', component: LawyerListComponent },
+  {path: 'profile', component:ProfileComponent},
+  {path: 'edit profile', component:EditProfileComponent},
+  { path: '', redirectTo: 'Lawyers', pathMatch: 'full'},
+  { path: 'Subscription', component: SubscriptionComponent},
   { path: 'summary', component: SummarySectionComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
