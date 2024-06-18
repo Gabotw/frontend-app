@@ -17,7 +17,7 @@ export class SubscriptionComponent {
   }
 
   goToSummarySection(){
-    this.router.navigate(['/summary']);
+    this.router.navigate(['/summary']).then(() => {});
   }
 
 }
