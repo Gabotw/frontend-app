@@ -13,6 +13,7 @@ export class AppComponent {
     { path: '/Subscription', title: 'Subscription'},
     { path: '/profile', title: 'Profile'},
     { path: '/edit profile'},
+    { path: '/educational resource', title: 'Educational Resource'},
     { path: '/landingPage', title: 'LandingPage'},
   ]
 }

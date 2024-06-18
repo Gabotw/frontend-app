@@ -28,6 +28,7 @@ import {SubscriptionComponent} from "./public/pages/subscription/subscription.co
 import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
 import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
+import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filte
     SubscriptionPayComponent,
     SummarySectionComponent,
     LawyerFilterComponent,
+    EducationalResourceComponent,
   ],
   imports: [
     BrowserModule,
