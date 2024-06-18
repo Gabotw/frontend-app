@@ -29,6 +29,7 @@ import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscrip
 import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
 import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
+import {ResourceService} from "./educational-resource/services/resource.service";
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { EducationalResourceComponent } from './educational-resource/pages/educa
   ],
   providers: [
     provideAnimationsAsync(),
-    LawyerService
+    LawyerService,
+    ResourceService
   ],
   bootstrap: [AppComponent]
 })

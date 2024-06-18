@@ -1,11 +1,14 @@
 <mat-card *ngIf="resource" class="resource-card">
-  <div class="card-content">
-    <div class="card-upper">
-      <div class="card-details">
-        <mat-card-title>{{resource.title}}</mat-card-title>
-        <p>Specialty: {{resource.description}}</p>
-        <p>Years of experience: {{resource.authorId}}</p>
-        <p>Cases won: {{resource.educationalResourceType}}</p>
-      </div>
-    </div>
+  <mat-card-header>
+    <mat-card-title>{{resource.title}}</mat-card-title>
+    <mat-card-subtitle>Educational Resource</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p><strong>Description:</strong> {{resource.description}}</p>
+    <p><strong>Author ID:</strong> {{resource.authorId}}</p>
+    <p><strong>Educational Resource Type:</strong> {{resource.educationalResourceType}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>View More</button>
+  </mat-card-actions>
 </mat-card>
