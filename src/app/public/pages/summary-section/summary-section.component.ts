@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Lawyer} from "../../../lawyers/model/lawyer.entity";
 import {LawyerService} from "../../../lawyers/services/lawyer.service";
-
+import { MatDialog } from '@angular/material/dialog';
+import { LegalCaseComponent } from '../legal-case/legal-case.component';
+import { ConsultationComponent } from '../consultation/consultation.component';
 
 @Component({
   selector: 'app-summary-section',
@@ -11,7 +13,7 @@ import {LawyerService} from "../../../lawyers/services/lawyer.service";
 export class SummarySectionComponent implements OnInit {
   lawyers: Lawyer[] = [];
 
-  constructor(private lawyerService: LawyerService) { }
+  constructor(private lawyerService: LawyerService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.lawyerService.getAll().subscribe((lawyers) => {
@@ -23,5 +25,17 @@ export class SummarySectionComponent implements OnInit {
     const end = new Date();
     const randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
     return randomDate.toLocaleDateString();
+  }
+
+  openLegalCaseDialog(lawyer: Lawyer): void {
+    this.dialog.open(LegalCaseComponent, {
+      data: { lawyer: lawyer}
+    });
+  }
+
+  openConsultationDialog(lawyer: Lawyer): void {
+    this.dialog.open(ConsultationComponent, {
+      data: { lawyer: lawyer }
+    });
   }
 }
