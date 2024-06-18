@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {Router} from "@angular/router";
+import {PaymentConfirmedComponent} from "../payment-confirmed/payment-confirmed.component";
 
 @Component({
   selector: 'app-subscription-pay',
@@ -17,5 +18,10 @@ export class SubscriptionPayComponent {
   goToLawyerSection(){
     this.router.navigate(['/Lawyers']).then(() => {});
     this.closeDialog();
+  }
+
+  openPaymentConfirmedDialog(){
+    this.dialog.open(PaymentConfirmedComponent);
+
   }
 }

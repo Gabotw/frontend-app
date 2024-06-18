@@ -28,6 +28,8 @@ import {SubscriptionComponent} from "./public/pages/subscription/subscription.co
 import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
 import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
+import { PaymentConfirmedComponent } from './public/pages/payment-confirmed/payment-confirmed.component';
+
 
 
 @NgModule({
@@ -43,6 +45,7 @@ import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filte
     SubscriptionPayComponent,
     SummarySectionComponent,
     LawyerFilterComponent,
+    PaymentConfirmedComponent,
   ],
   imports: [
     BrowserModule,
