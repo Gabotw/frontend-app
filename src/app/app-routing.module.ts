@@ -12,10 +12,11 @@ import {
 
 
 
+
 const routes: Routes = [
   { path: 'Lawyers', component: LawyerListComponent },
   { path: 'profile', component:ProfileComponent},
-  { path: 'edit profile', component:EditProfileComponent},
+  { path: 'edit-profile', component:EditProfileComponent},
   { path: '', redirectTo: 'Lawyers', pathMatch: 'full'},
   { path: 'Subscription', component: SubscriptionComponent},
   { path: 'summary', component: SummarySectionComponent },
