@@ -30,6 +30,7 @@ import { SummarySectionComponent } from './public/pages/summary-section/summary-
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
 import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
 import {ResourceService} from "./educational-resource/services/resource.service";
+import { InformationPayComponent } from './public/pages/information-pay/information-pay.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import {ResourceService} from "./educational-resource/services/resource.service"
     SummarySectionComponent,
     LawyerFilterComponent,
     EducationalResourceComponent,
+    InformationPayComponent,
   ],
   imports: [
     BrowserModule,
