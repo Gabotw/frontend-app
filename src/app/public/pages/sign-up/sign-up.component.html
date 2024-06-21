@@ -10,31 +10,31 @@
     <mat-card-content>
       <div class="user-info">
         <br>
-        <mat-label style="text-align: center; font-size: 30px"><b>Registrate</b></mat-label>
+        <mat-label style="text-align: center; font-size: 30px"><b>Register</b></mat-label>
         <br><br>
-        <mat-label style="text-align: left; font-size: 15px">Ingrese la información solicitada</mat-label>
+        <mat-label style="text-align: left; font-size: 15px">Enter the requested information</mat-label>
         <br>
 
         <section>
-          <mat-label>¿Ya tiene una cuenta?</mat-label>
-          <button mat-button (click)="goToLogin();">Iniciar Sesión</button>
+          <mat-label>Do you already have an account?</mat-label>
+          <button mat-button (click)="goToLogin();">Log in</button>
         </section>
         <br>
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="Nombres">
+            <input matInput [(ngModel)]="name" placeholder="Names">
           </mat-form-field>
         </div>
 
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="lastName" placeholder="Apellidos">
+            <input matInput [(ngModel)]="lastName" placeholder="Surnames">
           </mat-form-field>
         </div>
 
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="email" placeholder="Correo electrónico">
+            <input matInput [(ngModel)]="email" placeholder="Email">
           </mat-form-field>
         </div>
 
@@ -46,16 +46,16 @@
 
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="password" type="password" placeholder="Contraseña">
+            <input matInput [(ngModel)]="password" type="password" placeholder="password">
           </mat-form-field>
         </div>
 
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="repeat_password" type="password" placeholder="Repetir contraseña">
+            <input matInput [(ngModel)]="repeat_password" type="password" placeholder="repeat password">
           </mat-form-field>
         </div>
-        <button mat-button style="color: black; background-color: #F29979" class="submit-button" (click)="register()">Registrar</button>
+        <button mat-button style="color: black; background-color: #F29979" class="submit-button" (click)="register()">To register</button>
       </div>
     </mat-card-content>
   </mat-card>
