@@ -1,0 +1,51 @@
+.structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../../../assets/img/bg.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-card {
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../../assets/img/texture1.jpg");
+}
+
+img-card-logo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
+  max-width: 500px;
+}
+
+.form-card {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
