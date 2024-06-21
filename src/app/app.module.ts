@@ -30,6 +30,12 @@ import { SummarySectionComponent } from './public/pages/summary-section/summary-
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
 import { SignInComponent } from './public/pages/sign-in/sign-in.component';
 import { SignUpComponent } from './public/pages/sign-up/sign-up.component';
+import { PaymentConfirmedComponent } from './public/pages/payment-confirmed/payment-confirmed.component';
+import { LegalCaseComponent } from './public/pages/legal-case/legal-case.component';
+import { ConsultationComponent } from './public/pages/consultation/consultation.component';
+import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
+import {ResourceService} from "./educational-resource/services/resource.service";
+import { InformationPayComponent } from './public/pages/information-pay/information-pay.component';
 
 
 @NgModule({
@@ -47,6 +53,11 @@ import { SignUpComponent } from './public/pages/sign-up/sign-up.component';
     LawyerFilterComponent,
     SignInComponent,
     SignUpComponent,
+    PaymentConfirmedComponent,
+    LegalCaseComponent,
+    ConsultationComponent,
+    EducationalResourceComponent,
+    InformationPayComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +79,8 @@ import { SignUpComponent } from './public/pages/sign-up/sign-up.component';
   ],
   providers: [
     provideAnimationsAsync(),
-    LawyerService
+    LawyerService,
+    ResourceService
   ],
   bootstrap: [AppComponent]
 })

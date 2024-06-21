@@ -9,11 +9,11 @@ import {Router} from "@angular/router";
 export class AppComponent {
   title = 'MedicDefense';
   options = [
-    { path: '/abogados', title: 'Abogados'},
-    { path: '/summary', title: 'Resumen'},
-    { path: '/suscripcion', title: 'Suscripcion'},
-    { path: '/perfil', title: 'Perfil'},
-    { path: '/editar-perfil'},
+    { path: '/Lawyers', title: 'Lawyers'},
+    { path: '/summary', title: 'Summary'},
+    { path: '/Subscription', title: 'Subscription'},
+    { path: '/profile', title: 'Profile'},
+    { path: '/educational resource', title: 'Educational Resource'},
     { path: '/landingPage', title: 'LandingPage'},
   ]
   constructor(private router: Router) {}

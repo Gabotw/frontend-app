@@ -1,0 +1,16 @@
+div {
+  width: 100%;  /* Cambia esto para que ocupe toda la pantalla */
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #3f51b5;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+}

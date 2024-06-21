@@ -1,0 +1,20 @@
+.consultation-card{
+  display: flex;
+  flex-direction: column;
+  background-color: #A67360;
+  box-shadow: 0 4px 8px 0 rgba(0,0, 0, 0.2);
+}
+
+.legal-case-card button {
+  background-color: #F2EFDC;
+  color: black;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 5px;
+  background-color: #F2C6AC;
+  border-radius: 20px;
+}

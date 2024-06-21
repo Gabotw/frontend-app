@@ -8,17 +8,22 @@ import {SubscriptionComponent} from "./public/pages/subscription/subscription.co
 import {SummarySectionComponent} from "./public/pages/summary-section/summary-section.component";
 import {SignInComponent} from "./public/pages/sign-in/sign-in.component";
 import {SignUpComponent} from "./public/pages/sign-up/sign-up.component";
+import {
+  EducationalResourceComponent
+} from "./educational-resource/pages/educational-resource/educational-resource.component";
 
 
 const routes: Routes = [
-  { path: 'abogados', component: LawyerListComponent },
+  { path: 'Lawyers', component: LawyerListComponent },
   {path: 'sign-in', component: SignInComponent},
   {path: 'sign-up', component: SignUpComponent},
-  {path: 'perfil', component:ProfileComponent},
-  {path: 'editar-perfil', component:EditProfileComponent},
+  { path: 'profile', component:ProfileComponent},
+  { path: 'edit-profile', component:EditProfileComponent},
   { path: '', redirectTo: 'sign-in', pathMatch: 'full'},
-  { path: 'suscripcion', component: SubscriptionComponent},
+  { path: 'Subscription', component: SubscriptionComponent},
   { path: 'summary', component: SummarySectionComponent },
+  { path: 'educational resource', component: EducationalResourceComponent},
+
   { path: '**', component: PageNotFoundComponent },
 ];
 

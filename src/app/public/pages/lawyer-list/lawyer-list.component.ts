@@ -5,8 +5,6 @@ import { LawyerProfileComponent } from '../../../lawyers/pages/lawyer-profile/la
 import { MatDialog} from "@angular/material/dialog";
 import {LawyerFilterComponent} from "../lawyer-filter/lawyer-filter.component";
 
-
-
 @Component({
   selector: 'app-lawyer-list',
   templateUrl: './lawyer-list.component.html',
