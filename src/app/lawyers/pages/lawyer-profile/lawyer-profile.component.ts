@@ -2,7 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Lawyer} from "../../../lawyers/model/lawyer.entity";
 import {LawyerService} from "../../../lawyers/services/lawyer.service";
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {SubscriptionPayComponent} from "../../../public/pages/subscription-pay/subscription-pay.component";
 
 
 @Component({
@@ -18,7 +19,8 @@ export class LawyerProfileComponent implements OnInit {
     private route: ActivatedRoute,
     private lawyerService: LawyerService,
     public dialogRef: MatDialogRef<LawyerProfileComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -29,5 +31,14 @@ export class LawyerProfileComponent implements OnInit {
 
   closeDialog() {
     this.dialogRef.close();
+  }
+
+  openSubscriptionPay() {
+    this.dialog.open(SubscriptionPayComponent,
+    {
+      data:{
+        lawyer: this.lawyer
+      }
+    });
   }
 }
