@@ -15,6 +15,6 @@ export class SignInComponent {
   }
   login() {
     console.log('Usuario autenticado');
-    this.router.navigateByUrl('/abogados');
+    this.router.navigateByUrl('/Lawyers');
   }
 }
