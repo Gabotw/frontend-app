@@ -7,12 +7,12 @@
   <div class="card-content">
     <div class="card-upper">
       <div class="card-image">
-        <img mat-card-image [src]="lawyer.urlToImage" alt="Lawyer Picture">
+        <!--<img mat-card-image [src]="lawyer.url" alt="Lawyer Picture">-->
       </div>
       <div class="card-details">
-        <mat-card-title>{{lawyer.name}}</mat-card-title>
-        <p>Specialty: {{lawyer.specialization}}</p>
-        <p>Years of experience: {{lawyer.yearsOfExperience}}</p>
+        <mat-card-title>{{lawyer.lawyerName}}</mat-card-title>
+        <p>Specialty: none </p>
+        <p>Years of experience: {{lawyer.yearsExperience}}</p>
         <p>Cases won: {{lawyer.casesWon}}</p>
         <p>Price: {{lawyer.price}}</p>
       </div>
