@@ -9,7 +9,7 @@
         <div class="card-right">
           <h3>{{lawyer.name}}</h3>
           <p>Cost: {{lawyer.price}}</p>
-          <button mat-button>Review</button>
+          <button mat-button (click)="openLegalCaseDialog(lawyer)">Review</button>
         </div>
       </div>
     </mat-card-content>
@@ -24,7 +24,7 @@
         </div>
         <div class="card-right">
           <h3>{{consultation.name}}</h3>
-          <button mat-button>Review</button>
+          <button mat-button (click)="openConsultationDialog(consultation)">Review</button>
         </div>
       </div>
     </mat-card-content>
