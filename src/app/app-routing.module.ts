@@ -20,7 +20,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'Lawyers', pathMatch: 'full'},
   { path: 'Subscription', component: SubscriptionComponent},
   { path: 'summary', component: SummarySectionComponent },
+  //{ path: 'subscription-pay' },
   { path: 'educational resource', component: EducationalResourceComponent},
+
   { path: '**', component: PageNotFoundComponent },
 ];
 

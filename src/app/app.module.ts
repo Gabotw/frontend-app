@@ -28,6 +28,7 @@ import {SubscriptionComponent} from "./public/pages/subscription/subscription.co
 import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
 import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
+import { PaymentConfirmedComponent } from './public/pages/payment-confirmed/payment-confirmed.component';
 import { LegalCaseComponent } from './public/pages/legal-case/legal-case.component';
 import { ConsultationComponent } from './public/pages/consultation/consultation.component';
 import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
@@ -48,6 +49,7 @@ import { InformationPayComponent } from './public/pages/information-pay/informat
     SubscriptionPayComponent,
     SummarySectionComponent,
     LawyerFilterComponent,
+    PaymentConfirmedComponent,
     LegalCaseComponent,
     ConsultationComponent,
     EducationalResourceComponent,
