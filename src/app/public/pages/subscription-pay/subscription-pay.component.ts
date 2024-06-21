@@ -4,6 +4,7 @@ import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {InformationPayComponent} from "../information-pay/information-pay.component";
 import {Lawyer} from "../../../lawyers/model/lawyer.entity";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-subscription-pay',
@@ -11,9 +12,7 @@ import {Lawyer} from "../../../lawyers/model/lawyer.entity";
   styleUrl: './subscription-pay.component.css'
 })
 export class SubscriptionPayComponent {
-
   constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: Lawyer}, private router:Router) {  }
-
 
   closeDialog(){
     this.dialog.closeAll();

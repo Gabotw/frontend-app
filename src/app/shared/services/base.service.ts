@@ -1,8 +1,11 @@
 import {environment} from "../../../environments/environment";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
+import {Resource} from "../../educational-resource/model/resource.entity";
 
-export abstract class BaseService<T> {
+
+
+export class BaseService<T> {
   basePath: string = `${environment.serverBasePath}`;
   resourceEndpoint: string = '/resource';
 
@@ -56,6 +59,11 @@ export abstract class BaseService<T> {
   // Get one
   get(id: any): Observable<T> {
     return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  getAllResources(): Observable<Resource[]> {
+    return this.http.get<Resource[]>(`${this.resourcePath}/educational-resources`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

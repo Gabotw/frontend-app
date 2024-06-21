@@ -8,6 +8,9 @@ export class Lawyer {
   price: string;
   email: string;
   phoneNumber: string;
+  fullName: string;
+  DNI: string;
+  profileId: number;
 
   constructor() {
     this.id = 0;
@@ -19,6 +22,8 @@ export class Lawyer {
     this.price = '';
     this.email = '';
     this.phoneNumber = '';
+    this.fullName = '';
+    this.DNI = '';
+    this.profileId = 0;
   }
 }
-

@@ -1,3 +1,4 @@
 export const environment = {
-  serverBasePath: 'https://my-json-server.typicode.com/Aplicaciones-Web-Grupo-CodeRush/Consultation/'
+  serverBasePath: 'http://localhost:8080/api/v1'
 };
+
