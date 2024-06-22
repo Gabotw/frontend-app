@@ -26,7 +26,7 @@ export class LawyerListComponent implements OnInit {
   )  { }
 
   ngOnInit(): void {
-    /*this.lawyerService.getAll().subscribe((lawyers) => {
+    /*this.lawyerService.getAllLawyers().subscribe((lawyers) => {
       this.lawyers = lawyers;
       this.filteredLawyers = lawyers;
     });*/
@@ -50,7 +50,7 @@ export class LawyerListComponent implements OnInit {
     };
   }
 
-  /*search(): void {
+  search(): void {
     if (this.searchTerm) {
       this.filteredLawyers = this.lawyers.filter(lawyer =>
         lawyer.name.toLowerCase().includes(this.searchTerm.toLowerCase())
@@ -58,11 +58,16 @@ export class LawyerListComponent implements OnInit {
     } else {
       this.filteredLawyers = this.lawyers;
     }
-  }*/
+  }
 
-  openDialog(lawyerId: string){
+  /*openDialog(lawyerId: string){
     const dialogRef = this.dialog.open(LawyerProfileComponent, {
       data: { id: lawyerId }
+    });
+  }*/
+  openDialog(lawyer: any){
+    const dialogRef = this.dialog.open(LawyerProfileComponent, {
+      data: { lawyer: lawyer }
     });
   }
 

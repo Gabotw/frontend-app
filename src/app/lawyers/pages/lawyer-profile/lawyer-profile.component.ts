@@ -16,6 +16,7 @@ import {ProfileService} from "../../../profile/services/profile.service";
 
 export class LawyerProfileComponent implements OnInit {
   lawyer: any;
+  profile: any;
   lawyers: any[] = [];
   profiles: Profile[] = [];
 
@@ -26,12 +27,10 @@ export class LawyerProfileComponent implements OnInit {
     public dialogRef: MatDialogRef<LawyerProfileComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialog: MatDialog
-  ) {}
+  ) { this.lawyer = data.lawyer; }
 
   ngOnInit() {
-    this.lawyerService.get(this.data.id).subscribe((lawyer: Lawyer) => {
-      this.lawyer = this.processLawyerData(lawyer);
-    });
+
     this.profileService.getAllProfiles().subscribe((profiles) => {
       this.profiles = profiles;
 

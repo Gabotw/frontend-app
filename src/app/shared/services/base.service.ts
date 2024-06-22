@@ -61,6 +61,8 @@ export abstract class BaseService<T> {
       .pipe(retry(2), catchError(this.handleError));
   }
 
+
+
   // Get all lawyers
   getAllLawyers(): Observable<Lawyer[]> {
     return this.http.get<Lawyer[]>(`${this.basePath}/lawyers`, this.httpOptions)
