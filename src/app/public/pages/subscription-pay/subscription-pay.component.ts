@@ -11,9 +11,7 @@ import {Lawyer} from "../../../lawyers/model/lawyer.entity";
   styleUrl: './subscription-pay.component.css'
 })
 export class SubscriptionPayComponent {
-
-  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: Lawyer}) {  }
-
+  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: Lawyer}, private router:Router) {  }
 
   closeDialog(){
     this.dialog.closeAll();

@@ -1,0 +1,29 @@
+<div class="structure">
+  <mat-card class="img-card" style="width: 500px !important; height: 800px">
+    <mat-card-content>
+      <div class="img-container">
+        <img src="assets/img/Logo.png" alt="logo" style="width: 240px;">
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="form-card" style="width: 600px !important; height: 800px">
+    <mat-card-content>
+      <div class="card-info">
+        <mat-label style="text-align: center; font-size: 30px"><b>Log in to your account</b></mat-label>
+        <br><br>
+        <div>
+          <mat-label style="text-align: left; font-size: 15px">Haven't you registered yet?</mat-label>
+          <button mat-button (click)="goToRegister();">Create Account</button>
+        </div>
+        <br>
+        <mat-form-field>
+          <input matInput [(ngModel)]="correo_electronico" type="text" placeholder="Email" class="input">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [(ngModel)]="contrasena" type="text" placeholder="Password" class="input">
+        </mat-form-field>
+        <button mat-button style="color: black; background-color: #F29979" class="submit-button" (click)="login();">Sign In</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -3,8 +3,11 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
 import {Lawyer} from "../../lawyers/model/lawyer.entity";
 import {Profile} from "../../profile/model/profile.entity";
+import {Resource} from "../../educational-resource/model/resource.entity";
 
-export abstract class BaseService<T> {
+
+
+export class BaseService<T> {
   basePath: string = `${environment.serverBasePath}`;
   resourceEndpoint: string = '/resource';
 
@@ -61,8 +64,6 @@ export abstract class BaseService<T> {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-
-
   // Get all lawyers
   getAllLawyers(): Observable<Lawyer[]> {
     return this.http.get<Lawyer[]>(`${this.basePath}/lawyers`, this.httpOptions)
@@ -72,6 +73,10 @@ export abstract class BaseService<T> {
   // Get all profiles
   getAllProfiles(): Observable<Profile[]> {
     return this.http.get<Profile[]>(`${this.basePath}/profiles`, this.httpOptions)
+  }
+  
+  getAllResources(): Observable<Resource[]> {
+    return this.http.get<Resource[]>(`${this.resourcePath}/educational-resources`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

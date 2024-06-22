@@ -13,4 +13,3 @@ export class Lawyer {
     this.price = 0;
   }
 }
-

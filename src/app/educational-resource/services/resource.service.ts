@@ -11,4 +11,5 @@ export class ResourceService extends BaseService<Resource>{
     super(http);
     this.resourceEndpoint = '/educational-resources';
   }
+
 }
