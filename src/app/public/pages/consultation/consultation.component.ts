@@ -1,6 +1,6 @@
 import { Inject, Component } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Lawyer} from "../../../lawyers/model/lawyer.entity";
+import {Profile} from "../../../lawyers/model/profile.entity";
 
 @Component({
   selector: 'app-consultation',
@@ -11,7 +11,7 @@ export class ConsultationComponent {
 
   constructor(
     public dialogRef: MatDialogRef<ConsultationComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { lawyer: Lawyer }
+    @Inject(MAT_DIALOG_DATA) public data: { profile: Profile }
   ) {}
 
   closeDialog(): void {

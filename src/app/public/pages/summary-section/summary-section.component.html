@@ -7,7 +7,7 @@
           <p>Date: {{randomDate()}}</p>
         </div>
         <div class="card-right">
-          <h3>{{lawyer.name}}</h3>
+          <h3>{{lawyer.casesWon}}</h3>
           <p>Cost: {{lawyer.price}}</p>
           <button mat-button (click)="openLegalCaseDialog(lawyer)">Review</button>
         </div>
@@ -23,7 +23,7 @@
           <p>Date: {{randomDate()}}</p>
         </div>
         <div class="card-right">
-          <h3>{{consultation.name}}</h3>
+          <h3>{{consultation.yearsExperience}}</h3>
           <button mat-button (click)="openConsultationDialog(consultation)">Review</button>
         </div>
       </div>

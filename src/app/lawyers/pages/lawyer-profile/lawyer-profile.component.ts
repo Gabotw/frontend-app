@@ -4,6 +4,8 @@ import {Lawyer} from "../../../lawyers/model/lawyer.entity";
 import {LawyerService} from "../../../lawyers/services/lawyer.service";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {SubscriptionPayComponent} from "../../../public/pages/subscription-pay/subscription-pay.component";
+import {Profile} from "../../model/profile.entity";
+import {ProfileService} from "../../services/profile.service";
 
 
 @Component({
@@ -13,19 +15,19 @@ import {SubscriptionPayComponent} from "../../../public/pages/subscription-pay/s
 })
 
 export class LawyerProfileComponent implements OnInit {
-  lawyer: Lawyer = new Lawyer();
+  profile: Profile = new Profile();
 
   constructor(
     private route: ActivatedRoute,
-    private lawyerService: LawyerService,
+    private profileService: ProfileService,
     public dialogRef: MatDialogRef<LawyerProfileComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialog: MatDialog
   ) {}
 
   ngOnInit() {
-    this.lawyerService.get(this.data.id).subscribe((lawyer: Lawyer) => {
-      this.lawyer = lawyer;
+    this.profileService.get(this.data.id).subscribe((profile: Profile) => {
+      this.profile = profile;
     });
   }
 
@@ -37,7 +39,7 @@ export class LawyerProfileComponent implements OnInit {
     this.dialog.open(SubscriptionPayComponent,
     {
       data:{
-        lawyer: this.lawyer
+        lawyer: this.profile
       }
     });
   }

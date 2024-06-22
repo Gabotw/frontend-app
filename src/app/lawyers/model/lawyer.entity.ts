@@ -1,29 +1,15 @@
 export class Lawyer {
-  id: number;
-  name: string;
-  yearsOfExperience: number;
-  specialization: string;
-  urlToImage: string;
-  casesWon: number;
-  price: string;
-  email: string;
-  phoneNumber: string;
-  fullName: string;
-  DNI: string;
+  medicDefenseLawyerRecordId: string;
   profileId: number;
+  yearsExperience: number;
+  casesWon: number;
+  price: number;
 
   constructor() {
-    this.id = 0;
-    this.name = '';
-    this.yearsOfExperience = 0;
-    this.specialization = '';
-    this.urlToImage = '';
-    this.casesWon = 0;
-    this.price = '';
-    this.email = '';
-    this.phoneNumber = '';
-    this.fullName = '';
-    this.DNI = '';
+    this.medicDefenseLawyerRecordId = '';
     this.profileId = 0;
+    this.yearsExperience = 0;
+    this.casesWon = 0;
+    this.price = 0;
   }
 }

@@ -4,6 +4,8 @@ import {LawyerService} from "../../../lawyers/services/lawyer.service";
 import { LawyerProfileComponent } from '../../../lawyers/pages/lawyer-profile/lawyer-profile.component';
 import { MatDialog} from "@angular/material/dialog";
 import {LawyerFilterComponent} from "../lawyer-filter/lawyer-filter.component";
+import {Profile} from "../../../lawyers/model/profile.entity";
+import {ProfileService} from "../../../lawyers/services/profile.service";
 
 @Component({
   selector: 'app-lawyer-list',
@@ -12,24 +14,28 @@ import {LawyerFilterComponent} from "../lawyer-filter/lawyer-filter.component";
 })
 export class LawyerListComponent implements OnInit {
   lawyers: Lawyer[] = [];
-  filteredLawyers: Lawyer[] = [];
+  profiles: Profile[] = [];
+  filteredProfiles: Profile[] = [];
   searchTerm: string = '';
 
-  constructor(private lawyerService: LawyerService, public dialog: MatDialog) { }
+  constructor(private lawyerService: LawyerService, private profileService: ProfileService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.lawyerService.getAll().subscribe((lawyers) => {
       this.lawyers = lawyers;
-      this.filteredLawyers = lawyers;
+    });
+    this.profileService.getAll().subscribe((profiles) => {
+      this.profiles = profiles;
+      this.filteredProfiles = profiles;
     });
   }
   search(): void {
     if (this.searchTerm) {
-      this.filteredLawyers = this.lawyers.filter(lawyer =>
-        lawyer.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      this.filteredProfiles = this.profiles.filter(profile =>
+        profile.fullName.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     } else {
-      this.filteredLawyers = this.lawyers;
+      this.filteredProfiles = this.profiles;
     }
   }
 
@@ -42,4 +48,6 @@ export class LawyerListComponent implements OnInit {
   openFilterDialog() {
     this.dialog.open(LawyerFilterComponent);
   }
+
+  protected readonly Lawyer = Lawyer;
 }

@@ -4,7 +4,6 @@ import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {InformationPayComponent} from "../information-pay/information-pay.component";
 import {Lawyer} from "../../../lawyers/model/lawyer.entity";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-subscription-pay',
@@ -31,7 +30,7 @@ export class SubscriptionPayComponent {
     this.dialog.closeAll();
     this.dialog.open(InformationPayComponent, {
       data: {
-        lawyerName: this.data.lawyer.name,
+        lawyerName: this.data.lawyer.casesWon,
         userName: 'User Name',
         paymentDate: new Date().toLocaleDateString(),
         paymentTime: new Date().toLocaleTimeString(),
