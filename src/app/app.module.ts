@@ -38,6 +38,7 @@ import {ResourceService} from "./educational-resource/services/resource.service"
 import { InformationPayComponent } from './public/pages/information-pay/information-pay.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,7 @@ import { InformationPayComponent } from './public/pages/information-pay/informat
     ConsultationComponent,
     EducationalResourceComponent,
     InformationPayComponent,
+
   ],
   imports: [
     BrowserModule,

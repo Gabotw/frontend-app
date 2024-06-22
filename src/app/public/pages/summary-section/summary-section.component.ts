@@ -4,6 +4,8 @@ import {LawyerService} from "../../../lawyers/services/lawyer.service";
 import { MatDialog } from '@angular/material/dialog';
 import { LegalCaseComponent } from '../legal-case/legal-case.component';
 import { ConsultationComponent } from '../consultation/consultation.component';
+import {Profile} from "../../../profile/model/profile.entity";
+import {ProfileService} from "../../../profile/services/profile.service";
 
 @Component({
   selector: 'app-summary-section',
@@ -11,15 +13,39 @@ import { ConsultationComponent } from '../consultation/consultation.component';
   styleUrl: './summary-section.component.css'
 })
 export class SummarySectionComponent implements OnInit {
-  lawyers: Lawyer[] = [];
+  lawyers: any[] = [];
+  profiles: Profile[] = [];
 
-  constructor(private lawyerService: LawyerService, private dialog: MatDialog) { }
+  constructor(
+    private lawyerService: LawyerService,
+    private profileService: ProfileService,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
-    this.lawyerService.getAll().subscribe((lawyers) => {
+    /*this.lawyerService.getAll().subscribe((lawyers) => {
       this.lawyers = lawyers.slice(0, 5); // Obtén solo los primeros 5 abogados
+    });*/
+    this.profileService.getAllProfiles().subscribe((profiles) => {
+      this.profiles = profiles;
+
+      this.lawyerService.getAllLawyers().subscribe((lawyers) => {
+        this.lawyers = lawyers.map(lawyer => this.processLawyerData(lawyer));
+      });
     });
   }
+
+  private processLawyerData(lawyer: Lawyer): any {
+    const profile = this.profiles.find(p => p.id === lawyer.profileId);
+
+    return {
+      ...lawyer,
+      lawyerName: profile ? profile.fullName : '',
+      email: profile ? profile.email : '',
+      phoneNumber: profile ? profile.phoneNumber : ''
+    };
+  }
+
   randomDate(): string {
     const start = new Date(2000, 0, 1);
     const end = new Date();

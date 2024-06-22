@@ -17,10 +17,10 @@ export class SubscriptionPayComponent {
     this.dialog.closeAll();
   }
 
-  goToLawyerSection(){
+  /*goToLawyerSection(){
     this.router.navigate(['/Lawyers']).then(() => {});
     this.closeDialog();
-  }
+  }*/
 
   openPaymentConfirmedDialog(){
     this.dialog.open(PaymentConfirmedComponent);
@@ -30,7 +30,7 @@ export class SubscriptionPayComponent {
     this.dialog.closeAll();
     this.dialog.open(InformationPayComponent, {
       data: {
-        lawyerName: this.data.lawyer.name,
+        //lawyerName: this.data.lawyer.name,
         userName: 'User Name',
         paymentDate: new Date().toLocaleDateString(),
         paymentTime: new Date().toLocaleTimeString(),
