@@ -2,13 +2,13 @@
   <button mat-raised-button color="primary" (click)="openFilterDialog()">Filter</button>
   <mat-form-field class="search-field mat-raised-button" color="primary">
     <mat-icon matPrefix>search</mat-icon>
-<!--   <input matInput placeholder="Buscar" [(ngModel)]="searchTerm" (input)="search()">-->
-    <input matInput placeholder="Buscar" [(ngModel)]="searchTerm" >
+   <input matInput placeholder="Buscar" [(ngModel)]="searchTerm" (input)="search()">
+<!--    <input matInput placeholder="Buscar" [(ngModel)]="searchTerm" >-->
   </mat-form-field>
 </div>
 
 <div class ="card-container">
-  <mat-card *ngFor="let lawyer of lawyers" class="lawyer-card">
+  <mat-card *ngFor="let lawyer of filteredLawyers" class="lawyer-card">
     <div class="card-content">
       <div class="card-image">
 <!--        <img mat-card-image [src]="lawyer.urlToImage" alt="Foto del abogado">-->

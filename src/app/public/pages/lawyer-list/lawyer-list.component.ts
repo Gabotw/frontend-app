@@ -16,7 +16,7 @@ export class LawyerListComponent implements OnInit {
   lawyers: any[] = [];
   profiles: Profile[] = [];
 
-  filteredLawyers: Lawyer[] = [];
+  filteredLawyers: any[] = [];
   searchTerm: string = '';
 
   constructor(
@@ -26,7 +26,7 @@ export class LawyerListComponent implements OnInit {
   )  { }
 
   ngOnInit(): void {
-    /*this.lawyerService.getAllLawyers().subscribe((lawyers) => {
+    /*this.lawyerService.getAll().subscribe((lawyers) => {
       this.lawyers = lawyers;
       this.filteredLawyers = lawyers;
     });*/
@@ -36,6 +36,7 @@ export class LawyerListComponent implements OnInit {
 
       this.lawyerService.getAllLawyers().subscribe((lawyers) => {
         this.lawyers = lawyers.map(lawyer => this.processLawyerData(lawyer));
+        this.filteredLawyers = [...this.lawyers];
       });
     });
   }
@@ -53,10 +54,10 @@ export class LawyerListComponent implements OnInit {
   search(): void {
     if (this.searchTerm) {
       this.filteredLawyers = this.lawyers.filter(lawyer =>
-        lawyer.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+        lawyer.lawyerName.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     } else {
-      this.filteredLawyers = this.lawyers;
+      this.filteredLawyers = [...this.lawyers];
     }
   }
 
