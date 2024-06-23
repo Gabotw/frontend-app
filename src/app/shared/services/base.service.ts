@@ -1,19 +1,21 @@
-import {environment} from "../../../environments/environment";
-import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
-import {catchError, Observable, retry, throwError} from "rxjs";
-import {Lawyer} from "../../lawyers/model/lawyer.entity";
-import {Profile} from "../../profile/model/profile.entity";
-import {Resource} from "../../educational-resource/model/resource.entity";
+import { Injectable } from '@angular/core';
+import { environment } from "../../../environments/environment";
+import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
+import { catchError, Observable, retry, throwError } from "rxjs";
+import { Lawyer } from "../../lawyers/model/lawyer.entity";
+import { Profile } from "../../profile/model/profile.entity";
+import { Resource } from "../../educational-resource/model/resource.entity";
 
-
-
+@Injectable({
+  providedIn: 'root'
+})
 export class BaseService<T> {
   basePath: string = `${environment.serverBasePath}`;
   resourceEndpoint: string = '/resource';
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-type': 'application/json',
+      'Content-Type': 'application/json',
     })
   }
 
@@ -22,18 +24,19 @@ export class BaseService<T> {
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // Default error handling
-      console.log(`An error occurred ${error.error.message}`);
+      console.log(`An error occurred: ${error.error.message}`);
     } else {
       // Unsuccessful Response Error Code returned from backend
-      console.log(`Backend returned code ${error.status}, body was ${error.error}`);
+      console.log(`Backend returned code ${error.status}, body was: ${error.error}`);
     }
-    return throwError(() => new Error('Something happened with request, please try again later'));
+    return throwError(() => new Error('Something happened with request; please try again later.'));
   }
 
   // Build Resource Path
   private resourcePath() {
     return `${this.basePath}${this.resourceEndpoint}`;
   }
+
   // Create resource
   create(item: any): Observable<T> {
     return this.http.post<T>(this.resourcePath(), JSON.stringify(item), this.httpOptions)
@@ -58,7 +61,6 @@ export class BaseService<T> {
   }
 
   // Get by id
-  // Get one
   get(id: any): Observable<T> {
     return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
@@ -72,11 +74,17 @@ export class BaseService<T> {
 
   // Get all profiles
   getAllProfiles(): Observable<Profile[]> {
-    return this.http.get<Profile[]>(`${this.basePath}/profiles`, this.httpOptions)
+    return this.http.get<Profile[]>(`${this.basePath}/profiles`, this.httpOptions);
   }
-  
+
+  // Get profile by email
+  getProfileByEmail(email: string): Observable<Profile> {
+    return this.http.get<Profile>(`${this.basePath}/profiles/email?email=${email}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
   getAllResources(): Observable<Resource[]> {
-    return this.http.get<Resource[]>(`${this.resourcePath}/educational-resources`, this.httpOptions)
+    return this.http.get<Resource[]>(`${this.resourcePath()}/educational-resources`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

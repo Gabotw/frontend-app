@@ -1,12 +1,12 @@
 <div class="structure">
-  <mat-card class="img-card" style="width: 500px !important; height: 900px">
+  <mat-card class="img-card">
     <mat-card-content>
       <div class="img-container">
-        <img src="assets/img/Logo.png" alt="logo" style="width: 240px;">
+        <img src="assets/img/Logo.png" alt="logo" class="logo-img">
       </div>
     </mat-card-content>
   </mat-card>
-  <mat-card class="form-card" style="width: 600px; height: 900px">
+  <mat-card class="form-card">
     <mat-card-content>
       <div class="user-info">
         <br>
@@ -17,7 +17,7 @@
 
         <section>
           <mat-label>Do you already have an account?</mat-label>
-          <button mat-button (click)="goToLogin();">Log in</button>
+          <button mat-button (click)="goToLogin()">Log in</button>
         </section>
         <br>
         <div class="form-row">
@@ -40,21 +40,49 @@
 
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="dni" placeholder="dni">
+            <input matInput [(ngModel)]="dni" placeholder="DNI">
           </mat-form-field>
         </div>
 
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="password" type="password" placeholder="password">
+            <input matInput [(ngModel)]="password" type="password" placeholder="Password">
           </mat-form-field>
         </div>
 
         <div class="form-row">
           <mat-form-field>
-            <input matInput [(ngModel)]="repeat_password" type="password" placeholder="repeat password">
+            <input matInput [(ngModel)]="repeat_password" type="password" placeholder="Repeat password">
           </mat-form-field>
         </div>
+
+        <div class="form-row">
+          <mat-radio-group [(ngModel)]="userType">
+            <mat-radio-button value="student">Student</mat-radio-button>
+            <mat-radio-button value="doctor">Doctor</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div class="form-row" *ngIf="userType === 'student'">
+          <mat-form-field>
+            <input matInput [(ngModel)]="university" placeholder="University">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row" *ngIf="userType === 'doctor'">
+          <mat-form-field>
+            <input matInput [(ngModel)]="placeOfWork" placeholder="Place of Work">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <input type="file" (change)="onFileSelected($event)">
+        </div>
+
+        <div class="form-row" *ngIf="profilePicturePreview">
+          <img [src]="profilePicturePreview" alt="Profile Picture" class="profile-picture-preview">
+        </div>
+
         <button mat-button style="color: black; background-color: #F29979" class="submit-button" (click)="register()">To register</button>
       </div>
     </mat-card-content>

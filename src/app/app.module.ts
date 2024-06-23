@@ -25,6 +25,7 @@ import { FooterContentComponent } from './public/components/footer-content/foote
 import { ProfileComponent } from './public/pages/profile/profile.component';
 import { EditProfileComponent } from './public/pages/edit-profile/edit-profile.component';
 import {SubscriptionComponent} from "./public/pages/subscription/subscription.component";
+import {SubscriptionDoneComponent} from "./public/pages/subscription-done/subscription-done.component"
 import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
 import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
@@ -36,6 +37,7 @@ import { ConsultationComponent } from './public/pages/consultation/consultation.
 import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
 import {ResourceService} from "./educational-resource/services/resource.service";
 import { InformationPayComponent } from './public/pages/information-pay/information-pay.component';
+import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 
 
 
@@ -59,6 +61,7 @@ import { InformationPayComponent } from './public/pages/information-pay/informat
     ConsultationComponent,
     EducationalResourceComponent,
     InformationPayComponent,
+    SubscriptionDoneComponent
 
   ],
   imports: [
@@ -78,6 +81,8 @@ import { InformationPayComponent } from './public/pages/information-pay/informat
     MatCardModule,
     MatGridListModule,
     MatDialogModule,
+    MatRadioButton,
+    MatRadioGroup,
   ],
   providers: [
     provideAnimationsAsync(),
