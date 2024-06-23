@@ -6,6 +6,7 @@ import { LegalCaseComponent } from '../legal-case/legal-case.component';
 import { ConsultationComponent } from '../consultation/consultation.component';
 import {Profile} from "../../../profile/model/profile.entity";
 import {ProfileService} from "../../../profile/services/profile.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-summary-section',
@@ -19,7 +20,8 @@ export class SummarySectionComponent implements OnInit {
   constructor(
     private lawyerService: LawyerService,
     private profileService: ProfileService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -63,5 +65,9 @@ export class SummarySectionComponent implements OnInit {
     this.dialog.open(ConsultationComponent, {
       data: { lawyer: lawyer }
     });
+  }
+
+  shouldShow(){
+    return this.router.url == '/lawyer-summary';
   }
 }

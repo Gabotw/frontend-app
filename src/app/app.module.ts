@@ -36,6 +36,8 @@ import { ConsultationComponent } from './public/pages/consultation/consultation.
 import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
 import {ResourceService} from "./educational-resource/services/resource.service";
 import { InformationPayComponent } from './public/pages/information-pay/information-pay.component';
+import { LawyerViewComponent } from './public/pages/lawyer-view/lawyer-view.component';
+import { LawyerToolbarComponent } from './public/components/lawyer-toolbar/lawyer-toolbar.component';
 
 
 
@@ -59,6 +61,8 @@ import { InformationPayComponent } from './public/pages/information-pay/informat
     ConsultationComponent,
     EducationalResourceComponent,
     InformationPayComponent,
+    LawyerViewComponent,
+    LawyerToolbarComponent,
 
   ],
   imports: [

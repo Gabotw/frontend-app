@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {User} from "../../../user/model/user.entity";
 
 @Component({
@@ -12,8 +12,12 @@ export class ProfileComponent implements OnInit{
   selectedLink: string | undefined;
 
   constructor(
-    private route: ActivatedRoute,
-  ) {}
+    private route: ActivatedRoute,private router: Router
+  ) { }
+
+  shouldShow(){
+    return this.router.url == '/lawyer-profile';
+  }
 
   ngOnInit() {
   }
