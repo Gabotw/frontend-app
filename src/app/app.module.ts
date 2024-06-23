@@ -37,11 +37,11 @@ import { ConsultationComponent } from './public/pages/consultation/consultation.
 import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
 import {ResourceService} from "./educational-resource/services/resource.service";
 import { InformationPayComponent } from './public/pages/information-pay/information-pay.component';
+import { SubscriptionDoneComponent } from "./public/pages/subscription-done/subscription-done.component";
+import {MatActionList} from "@angular/material/list";
 import { LawyerViewComponent } from './public/pages/lawyer-view/lawyer-view.component';
 import { LawyerToolbarComponent } from './public/components/lawyer-toolbar/lawyer-toolbar.component';
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
-
-
 
 
 @NgModule({
@@ -67,7 +67,6 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
     LawyerViewComponent,
     LawyerToolbarComponent,
     SubscriptionDoneComponent
-
   ],
   imports: [
     BrowserModule,
@@ -86,6 +85,7 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
     MatCardModule,
     MatGridListModule,
     MatDialogModule,
+    MatActionList
     MatRadioButton,
     MatRadioGroup,
   ],

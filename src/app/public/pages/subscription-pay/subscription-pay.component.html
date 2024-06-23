@@ -16,26 +16,26 @@
       <div class="pay-1">
         <div>
           <b>Card number: </b>
-          <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+          <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" [(ngModel)]="cardNumber">
         </div>
         <div>
           <b>Amount payable: </b>
-          <input type="text" placeholder="S/ 0.00">
+          <input type="text" placeholder="S/ 0.00" [(ngModel)]="amountPayable">
         </div>
       </div>
       <div class="pay-1">
         <div>
           <b>Date of Expiry: </b>
-          <input type="text" placeholder="MM/AA">
+          <input type="text" placeholder="MM/AA" [(ngModel)]="expiryDate">
         </div>
         <div>
           <b>Security code: </b>
-          <input type="text" placeholder="XXX">
+          <input type="text" placeholder="XXX" [(ngModel)]="securityCode">
         </div>
       </div>
     </div>
     <mat-card-actions>
-      <button mat-button (click)="openDialog()">Continue</button>
+      <button mat-button [disabled]="!cardNumber || !amountPayable || !expiryDate || !securityCode" (click)="openDialog()">Continue</button>
     </mat-card-actions>
   </mat-card-content>
 </mat-card>

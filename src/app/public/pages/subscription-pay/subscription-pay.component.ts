@@ -1,8 +1,6 @@
 import {Router} from "@angular/router";
-import {PaymentConfirmedComponent} from "../payment-confirmed/payment-confirmed.component";
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
-import {InformationPayComponent} from "../information-pay/information-pay.component";
 import { SubscriptionDoneComponent} from "../subscription-done/subscription-done.component";
 
 @Component({
@@ -11,7 +9,13 @@ import { SubscriptionDoneComponent} from "../subscription-done/subscription-done
   styleUrl: './subscription-pay.component.css'
 })
 export class SubscriptionPayComponent {
-  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: any}, private router:Router) {  }
+  cardNumber: string = '';
+  amountPayable: string = '';
+  expiryDate: string = '';
+  securityCode: string = '';
+  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: any}, private router:Router) {
+
+  }
 
   openDialog(){
     this.dialog.open(SubscriptionDoneComponent);

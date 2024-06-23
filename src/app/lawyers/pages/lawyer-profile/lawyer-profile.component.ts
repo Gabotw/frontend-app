@@ -7,7 +7,6 @@ import {SubscriptionPayComponent} from "../../../public/pages/subscription-pay/s
 import {Profile} from "../../../profile/model/profile.entity";
 import {ProfileService} from "../../../profile/services/profile.service";
 
-
 @Component({
   selector: 'app-lawyer-profile',
   templateUrl: './lawyer-profile.component.html',
@@ -57,12 +56,8 @@ export class LawyerProfileComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  openSubscriptionPay() {
-    /*this.dialog.open(SubscriptionPayComponent,
-    {
-      data:{
-        lawyer: this.lawyer
-      }
-    });*/
+  openDialog(){
+    this.dialog.open(SubscriptionPayComponent);
   }
+
 }
