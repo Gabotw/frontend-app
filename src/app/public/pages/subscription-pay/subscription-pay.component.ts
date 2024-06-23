@@ -1,8 +1,6 @@
 import {Router} from "@angular/router";
-import {PaymentConfirmedComponent} from "../payment-confirmed/payment-confirmed.component";
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
-import {InformationPayComponent} from "../information-pay/information-pay.component";
 import { SubscriptionDoneComponent} from "../subscription-done/subscription-done.component";
 
 @Component({
