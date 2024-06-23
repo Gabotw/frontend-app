@@ -11,7 +11,13 @@ import { SubscriptionDoneComponent} from "../subscription-done/subscription-done
   styleUrl: './subscription-pay.component.css'
 })
 export class SubscriptionPayComponent {
-  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: any}, private router:Router) {  }
+  cardNumber: string = '';
+  amountPayable: string = '';
+  expiryDate: string = '';
+  securityCode: string = '';
+  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: any}, private router:Router) {
+
+  }
 
   openDialog(){
     this.dialog.open(SubscriptionDoneComponent);

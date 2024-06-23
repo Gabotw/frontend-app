@@ -36,6 +36,8 @@ import { ConsultationComponent } from './public/pages/consultation/consultation.
 import { EducationalResourceComponent } from './educational-resource/pages/educational-resource/educational-resource.component';
 import {ResourceService} from "./educational-resource/services/resource.service";
 import { InformationPayComponent } from './public/pages/information-pay/information-pay.component';
+import { SubscriptionDoneComponent } from "./public/pages/subscription-done/subscription-done.component";
+import {MatActionList} from "@angular/material/list";
 
 
 
@@ -59,7 +61,7 @@ import { InformationPayComponent } from './public/pages/information-pay/informat
     ConsultationComponent,
     EducationalResourceComponent,
     InformationPayComponent,
-
+    SubscriptionDoneComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +80,7 @@ import { InformationPayComponent } from './public/pages/information-pay/informat
     MatCardModule,
     MatGridListModule,
     MatDialogModule,
+    MatActionList
   ],
   providers: [
     provideAnimationsAsync(),

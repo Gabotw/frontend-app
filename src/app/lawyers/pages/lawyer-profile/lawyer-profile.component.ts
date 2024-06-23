@@ -6,6 +6,7 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog
 import {SubscriptionPayComponent} from "../../../public/pages/subscription-pay/subscription-pay.component";
 import {Profile} from "../../../profile/model/profile.entity";
 import {ProfileService} from "../../../profile/services/profile.service";
+import {SubscriptionDoneComponent} from "../../../public/pages/subscription-done/subscription-done.component";
 
 
 @Component({
@@ -55,12 +56,8 @@ export class LawyerProfileComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  openSubscriptionPay() {
-    /*this.dialog.open(SubscriptionPayComponent,
-    {
-      data:{
-        lawyer: this.lawyer
-      }
-    });*/
+  openDialog(){
+    this.dialog.open(SubscriptionPayComponent);
   }
+
 }

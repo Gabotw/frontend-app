@@ -8,10 +8,7 @@ import {SubscriptionComponent} from "./public/pages/subscription/subscription.co
 import {SummarySectionComponent} from "./public/pages/summary-section/summary-section.component";
 import {SignInComponent} from "./public/pages/sign-in/sign-in.component";
 import {SignUpComponent} from "./public/pages/sign-up/sign-up.component";
-import {
-  EducationalResourceComponent
-} from "./educational-resource/pages/educational-resource/educational-resource.component";
-
+import {EducationalResourceComponent} from "./educational-resource/pages/educational-resource/educational-resource.component";
 
 const routes: Routes = [
   { path: 'Lawyers', component: LawyerListComponent },
