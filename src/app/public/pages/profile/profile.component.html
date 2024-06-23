@@ -1,9 +1,10 @@
+<app-lawyer-toolbar *ngIf="shouldShow()"></app-lawyer-toolbar>
 <main class="main-content">
   <div class="section">
     <div class="content">
       <div class="user-info">
         <div class="description">
-          <img src="/assets/img/User.png" alt="User">
+          <img [src]="profileImage" alt="User">
         </div>
         <div class="information">
           <p>User: GabMedicoPrueba</p>

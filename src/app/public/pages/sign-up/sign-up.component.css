@@ -19,11 +19,9 @@
   background-image: url("../../../../assets/img/texture1.jpg");
 }
 
-img-card-logo {
-  width: 100%;
+.logo-img {
+  width: 240px;
   height: auto;
-  display: flex;
-  justify-content: left;
 }
 
 .img-container {
@@ -43,7 +41,7 @@ img-card-logo {
 }
 
 .form-card {
-  width: 180px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,19 +53,24 @@ img-card-logo {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Añade un margen inferior para separar las filas */
+  margin-bottom: 20px;
 }
 
 .form-row mat-label {
-  flex-basis: 30%; /* Aproximadamente 30% del ancho de la fila */
-  text-align: left; /* Alinea el texto a la izquierda */
+  flex-basis: 30%;
+  text-align: left;
 }
 
 .form-row mat-form-field {
-  flex-grow: 1; /* Ocupa el espacio restante en la fila */
+  flex-grow: 1;
 }
 
+.profile-picture-preview {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+}
 
-#btn.active{
-  color:#6FA9AE;
+#btn.active {
+  color: #6FA9AE;
 }

@@ -46,7 +46,9 @@ export class LawyerProfileComponent implements OnInit {
       ...lawyer,
       lawyerName: profile ? profile.fullName : '',
       email: profile ? profile.email : '',
-      phoneNumber: profile ? profile.phoneNumber : ''
+      phoneNumber: profile ? profile.phoneNumber : '',
+      dni: profile ? profile.dni : '',
+      imageUrl: profile ? profile.img_url : '',
     };
   }
 

@@ -8,7 +8,11 @@ import {SubscriptionComponent} from "./public/pages/subscription/subscription.co
 import {SummarySectionComponent} from "./public/pages/summary-section/summary-section.component";
 import {SignInComponent} from "./public/pages/sign-in/sign-in.component";
 import {SignUpComponent} from "./public/pages/sign-up/sign-up.component";
-import {EducationalResourceComponent} from "./educational-resource/pages/educational-resource/educational-resource.component";
+import {
+  EducationalResourceComponent
+} from "./educational-resource/pages/educational-resource/educational-resource.component";
+import {LawyerViewComponent} from "./public/pages/lawyer-view/lawyer-view.component";
+
 
 const routes: Routes = [
   { path: 'Lawyers', component: LawyerListComponent },
@@ -20,7 +24,9 @@ const routes: Routes = [
   { path: 'Subscription', component: SubscriptionComponent},
   { path: 'summary', component: SummarySectionComponent },
   { path: 'educational resource', component: EducationalResourceComponent},
-
+  { path: 'lawyer-view', component: LawyerViewComponent},
+  { path: 'lawyer-summary', component: SummarySectionComponent },
+  { path: 'lawyer-profile', component: ProfileComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

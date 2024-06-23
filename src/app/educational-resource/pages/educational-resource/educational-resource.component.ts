@@ -18,4 +18,11 @@ export class EducationalResourceComponent implements OnInit {
       this.resources = resources;
     });
   }
+  openUrl(url: string) {
+    if (!/^https?:\/\//i.test(url)) {
+      url = 'http://' + url;
+    }
+    window.open(url, "_blank");
+  }
+    protected readonly open = open;
 }
