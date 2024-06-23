@@ -4,7 +4,7 @@ export class Profile {
   email: string;
   phoneNumber: string;
   dni: string;
-  image_url: string;
+  img_url: string;
 
   constructor() {
     this.id = 0;
@@ -12,6 +12,6 @@ export class Profile {
     this.email = '';
     this.phoneNumber = '';
     this.dni = '';
-    this.image_url = '';
+    this.img_url = '';
   }
 }

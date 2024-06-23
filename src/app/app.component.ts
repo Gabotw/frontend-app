@@ -18,7 +18,9 @@ export class AppComponent {
   ]
   constructor(private router: Router) {}
   shouldShowToolbar(){
-    return !(this.router.url == '/sign-up' || this.router.url == '/sign-in');
+    return !(this.router.url == '/sign-up' || this.router.url == '/sign-in'
+    || this.router.url == '/lawyer-view' || this.router.url == '/lawyer-summary'
+    || this.router.url == '/lawyer-profile');
   }
   shouldShowFooter(){
     return this.router.url !== '/sign-up' && this.router.url !== '/sign-in';

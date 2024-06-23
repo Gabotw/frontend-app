@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { User } from "../../../user/model/user.entity";
+
+import { Component, OnInit, Inject } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {User} from "../../../user/model/user.entity";
 
 @Component({
   selector: 'app-profile',
@@ -12,7 +13,13 @@ export class ProfileComponent implements OnInit {
   selectedLink: string | undefined;
   profileImage: string | ArrayBuffer | null = localStorage.getItem('profileImage') || "/assets/img/User.png";
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,private router: Router
+  ) { }
+
+  shouldShow(){
+    return this.router.url == '/lawyer-profile';
+  }
 
   ngOnInit() {}
 
