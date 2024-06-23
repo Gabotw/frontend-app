@@ -7,14 +7,14 @@ import {Router} from "@angular/router";
   styleUrl: './sign-in.component.css'
 })
 export class SignInComponent {
-  correo_electronico: any;
-  contrasena: any;
+  email: any;
+  password: any;
   constructor(private router: Router){}
   goToRegister(){
     this.router.navigateByUrl('/sign-up');
   }
   login() {
-    console.log('Usuario autenticado');
+    console.log('User identified');
     this.router.navigateByUrl('/Lawyers');
   }
 }

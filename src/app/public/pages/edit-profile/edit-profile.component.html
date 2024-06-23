@@ -1,60 +1,61 @@
 <main>
-    <div class="section">
-        <div class="content">
-            <div class="user-info">
-                <div class="description">
-                    <img src="/assets/img/User.png" alt="User">
-                </div>
-                <div class="information">
-                    <div class="input-group">
-                        <label for="username">User:</label>
-                        <input id="username" type="text"  placeholder="Usuario" required />
-                    </div>
-
-                    <div class="input-group">
-                        <label for="first_name">Names:</label>
-                        <input id="first_name" type="text"  placeholder="Nombres" required />
-                    </div>
-
-                    <div class="input-group">
-                        <label for="last_name">Surnames:</label>
-                        <input id="last_name" type="text"  placeholder="Apellidos" required />
-                    </div>
-
-                    <div class="input-group">
-                        <label for="email">Mail:</label>
-                        <input id="email" type="email"  placeholder="Correo" required />
-                    </div>
-
-                    <div class="input-group">
-                        <label for="dni">DNI:</label>
-                        <input id="dni" type="text" placeholder="DNI/Carné de Extranjería" required />
-                    </div>
-                </div>
-            </div>
-            <div class="info-row">
-                <div class="password">
-                    <div class="password-group">
-                        <label for="password">Password:</label>
-                        <input id="password" type="password" required />
-                    </div>
-                    <div class="password-group">
-                        <label for="confirm-password">Confirm Password:</label>
-                        <input id="confirm-password" type="password" required />
-                    </div>
-                </div>
-            </div>
-            <div class="submit">
-                <button (click)="fileInput.click()" id="upload-btn">
-                  Upload Medicine license or<br> University card
-                </button>
-                <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" hidden required>
-                <span id="file-name">{{ fileName }}</span>
-            </div>
-            <div class="buttons">
-                <a mat-button href="/perfil" (click)="selectLink('/perfil')" [ngClass]="{ 'active': selectedLink === '/perfil' }">Save Changes</a>
-                <a mat-button href="/perfil" (click)="selectLink('/perfil')" [ngClass]="{ 'active': selectedLink === '/perfil' }">Cancel</a>
-            </div>
+  <div class="section">
+    <div class="content">
+      <div class="user-info">
+        <div class="description">
+          <img id="user-image" [src]="profileImage" alt="User" (click)="triggerFileInput('profile')">
+          <input #imageUpload type="file" id="image-upload" accept="image/*" style="display: none;" (change)="onFileSelected($event, 'profile')">
         </div>
+        <div class="information">
+          <div class="input-group">
+            <label for="username">Username:</label>
+            <input id="username" type="text" placeholder="Username" required />
+          </div>
+
+          <div class="input-group">
+            <label for="first_name">First Name:</label>
+            <input id="first_name" type="text" placeholder="First Name" required />
+          </div>
+
+          <div class="input-group">
+            <label for="last_name">Last Name:</label>
+            <input id="last_name" type="text" placeholder="Last Name" required />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Email" required />
+          </div>
+
+          <div class="input-group">
+            <label for="dni">DNI:</label>
+            <input id="dni" type="text" placeholder="DNI/Foreign ID" required />
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="password">
+          <div class="password-group">
+            <label for="password">Password:</label>
+            <input id="password" type="password" required />
+          </div>
+          <div class="password-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input id="confirm-password" type="password" required />
+          </div>
+        </div>
+      </div>
+      <div class="submit">
+        <button (click)="triggerFileInput('document')" id="upload-btn">
+          Upload Medical License or<br> University Card
+        </button>
+        <input #documentUpload type="file" id="document-upload" accept="image/*" style="display: none;" (change)="onFileSelected($event, 'document')">
+        <span id="document-file-name">{{ documentFileName }}</span>
+      </div>
+      <div class="buttons">
+        <a mat-button href="/profile" (click)="selectLink('/profile')" [ngClass]="{ 'active': selectedLink === '/profile' }">Save Changes</a>
+        <a mat-button href="/profile" (click)="selectLink('/profile')" [ngClass]="{ 'active': selectedLink === '/profile' }">Cancel</a>
+      </div>
     </div>
+  </div>
 </main>

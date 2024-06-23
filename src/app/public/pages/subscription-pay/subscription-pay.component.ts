@@ -3,7 +3,7 @@ import {PaymentConfirmedComponent} from "../payment-confirmed/payment-confirmed.
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {InformationPayComponent} from "../information-pay/information-pay.component";
-import {Lawyer} from "../../../lawyers/model/lawyer.entity";
+import { SubscriptionDoneComponent} from "../subscription-done/subscription-done.component";
 
 @Component({
   selector: 'app-subscription-pay',
@@ -11,31 +11,14 @@ import {Lawyer} from "../../../lawyers/model/lawyer.entity";
   styleUrl: './subscription-pay.component.css'
 })
 export class SubscriptionPayComponent {
-  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: Lawyer}, private router:Router) {  }
+  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data:{lawyer: any}, private router:Router) {  }
+
+  openDialog(){
+    this.dialog.open(SubscriptionDoneComponent);
+  }
+
 
   closeDialog(){
     this.dialog.closeAll();
   }
-
-  /*goToLawyerSection(){
-    this.router.navigate(['/Lawyers']).then(() => {});
-    this.closeDialog();
-  }*/
-
-  openPaymentConfirmedDialog(){
-    this.dialog.open(PaymentConfirmedComponent);
-
-  }
-  openPaymentInfo() {
-    this.dialog.closeAll();
-    this.dialog.open(InformationPayComponent, {
-      data: {
-        //lawyerName: this.data.lawyer.name,
-        userName: 'User Name',
-        paymentDate: new Date().toLocaleDateString(),
-        paymentTime: new Date().toLocaleTimeString(),
-        amount: 'Amount'
-      }
-    });
-   }
 }
