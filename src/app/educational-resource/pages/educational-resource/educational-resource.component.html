@@ -10,7 +10,7 @@
       <p><strong>Url:</strong> {{resource.url}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>View More</button>
+      <button mat-button (click)="openUrl(resource.url)">View More</button>
     </mat-card-actions>
   </mat-card>
 </div>
