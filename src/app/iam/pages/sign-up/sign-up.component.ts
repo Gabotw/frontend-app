@@ -103,7 +103,6 @@ export class SignUpComponent extends BaseFormComponent implements OnInit{
           this.submitted = true;
         }
       };
-      reader.readAsDataURL(this.profilePicture);
     } else {
       let imgUrl = "nohay:(";
       if(userType == 'doctor') {
@@ -146,10 +145,6 @@ export class SignUpComponent extends BaseFormComponent implements OnInit{
         this.submitted = true;
       }
     }
-    if (this.profilePicture) {
-      user.profilePicture = this.profilePicture;
-    }
-    console.log(user);
     this.router.navigateByUrl('/sign-in');
   }
 }
