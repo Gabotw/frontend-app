@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
@@ -29,8 +29,8 @@ import {SubscriptionDoneComponent} from "./public/pages/subscription-done/subscr
 import {SubscriptionPayComponent} from "./public/pages/subscription-pay/subscription-pay.component";
 import { SummarySectionComponent } from './public/pages/summary-section/summary-section.component';
 import { LawyerFilterComponent } from './public/pages/lawyer-filter/lawyer-filter.component';
-import { SignInComponent } from './public/pages/sign-in/sign-in.component';
-import { SignUpComponent } from './public/pages/sign-up/sign-up.component';
+import { SignInComponent } from './iam/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './iam/pages/sign-up/sign-up.component';
 import { PaymentConfirmedComponent } from './public/pages/payment-confirmed/payment-confirmed.component';
 import { LegalCaseComponent } from './public/pages/legal-case/legal-case.component';
 import { ConsultationComponent } from './public/pages/consultation/consultation.component';
@@ -41,6 +41,10 @@ import {MatActionList} from "@angular/material/list";
 import { LawyerViewComponent } from './public/pages/lawyer-view/lawyer-view.component';
 import { LawyerToolbarComponent } from './public/components/lawyer-toolbar/lawyer-toolbar.component';
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
+import { AuthenticationSectionComponent } from './iam/components/authentication-section/authentication-section.component';
+import {provideNativeDateAdapter} from "@angular/material/core";
+import {AuthenticationInterceptor} from "./iam/services/authentication.interceptor";
+import {AuthenticationService} from "./iam/services/authentication.service";
 
 
 @NgModule({
@@ -65,7 +69,8 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
     InformationPayComponent,
     LawyerViewComponent,
     LawyerToolbarComponent,
-    SubscriptionDoneComponent
+    SubscriptionDoneComponent,
+    AuthenticationSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -90,8 +95,15 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
   ],
   providers: [
     provideAnimationsAsync(),
+    provideNativeDateAdapter(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthenticationInterceptor,
+      multi: true
+    },
     LawyerService,
-    ResourceService
+    ResourceService,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

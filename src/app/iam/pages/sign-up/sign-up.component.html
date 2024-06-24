@@ -46,6 +46,12 @@
 
         <div class="form-row">
           <mat-form-field>
+            <input matInput [(ngModel)]="phoneNumber" placeholder="Phone Number">
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field>
             <input matInput [(ngModel)]="password" type="password" placeholder="Password">
           </mat-form-field>
         </div>
@@ -66,12 +72,6 @@
         <div class="form-row" *ngIf="userType === 'student'">
           <mat-form-field>
             <input matInput [(ngModel)]="university" placeholder="University">
-          </mat-form-field>
-        </div>
-
-        <div class="form-row" *ngIf="userType === 'doctor'">
-          <mat-form-field>
-            <input matInput [(ngModel)]="placeOfWork" placeholder="Place of Work">
           </mat-form-field>
         </div>
 

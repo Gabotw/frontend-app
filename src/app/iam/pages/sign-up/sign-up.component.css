@@ -10,9 +10,10 @@
   background-position: center;
 }
 
+
 .img-card {
-  width: 40%;
-  height: auto;
+  width: 30%;
+  height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
