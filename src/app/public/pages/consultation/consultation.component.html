@@ -1,5 +1,5 @@
 <div>
-  <mat-card class="consultation-card">
+  <mat-card *ngIf="lawyer" class="consultation-card">
     <mat-card-header>
       <mat-card-actions>
         <button mat-button class="button-back" (click)="closeDialog()">Cancel</button>
@@ -8,8 +8,8 @@
     <mat-card-content>
       <div class="card-content">
 <!--        <p>Nombre: {{data.lawyer.name}}</p>-->
-        <p>Nombre: nombre</p>
-        <h2>Conclusion del Abogado:</h2>
+        <p>Nombre: {{ lawyer.lawyerName }}</p>
+        <h2>Conclusion del Abogado: </h2>
         <p>Debes revisar el libro Derecho Medico</p>
       </div>
     </mat-card-content>
