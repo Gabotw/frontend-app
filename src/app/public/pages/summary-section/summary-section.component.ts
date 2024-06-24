@@ -44,7 +44,8 @@ export class SummarySectionComponent implements OnInit {
       ...lawyer,
       lawyerName: profile ? profile.fullName : '',
       email: profile ? profile.email : '',
-      phoneNumber: profile ? profile.phoneNumber : ''
+      phoneNumber: profile ? profile.phoneNumber : '',
+      img_url: profile ? profile.img_url : ''
     };
   }
 
@@ -55,13 +56,15 @@ export class SummarySectionComponent implements OnInit {
     return randomDate.toLocaleDateString();
   }
 
-  openLegalCaseDialog(lawyer: Lawyer): void {
-    this.dialog.open(LegalCaseComponent, {
+  openLegalCaseDialog(lawyer: any) {
+    console.log(lawyer);
+    const dialogRef = this.dialog.open(LegalCaseComponent, {
       data: { lawyer: lawyer}
     });
+
   }
 
-  openConsultationDialog(lawyer: Lawyer): void {
+  openConsultationDialog(lawyer: any) {
     this.dialog.open(ConsultationComponent, {
       data: { lawyer: lawyer }
     });

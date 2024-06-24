@@ -10,7 +10,8 @@ import {ProfileService} from "../../../profile/services/profile.service";
   styleUrl: './legal-case.component.css'
 })
 export class LegalCaseComponent implements OnInit {
-
+  lawyer: any;
+  profile: any;
   lawyers: any[] = [];
   profiles: Profile[] = [];
 
@@ -18,8 +19,8 @@ export class LegalCaseComponent implements OnInit {
   public dialogRef: MatDialogRef<LegalCaseComponent>,
   private lawyerService: LawyerService,
   private profileService: ProfileService,
-  @Inject(MAT_DIALOG_DATA) public data: { lawyer: Lawyer }
-  ) {}
+  @Inject(MAT_DIALOG_DATA) public data: any
+  ) { this.lawyer = data.lawyer;}
 
   ngOnInit(): void {
 

@@ -1,5 +1,5 @@
-<div>
-<mat-card class="legal-case-card">
+<div *ngIf="lawyer">
+<mat-card  class="legal-case-card">
   <mat-card-header>
     <mat-card-actions>
       <button mat-button class="button-back" (click)="closeDialog()">Cancel</button>
@@ -11,8 +11,8 @@
 <!--    <p>Costo: {{data.lawyer.price}}</p>-->
 <!--    <h2>Descripcion de servicio:</h2>-->
 <!--    <p>{{data.lawyer.specialization}}</p>-->
-      <p>Nombre: nombre</p>
-      <p>Costo: costo</p>
+      <p>Name: {{ lawyer.lawyerName }}</p>
+      <p>Price: {{ lawyer.price }}</p>
       <h2>Descripcion de servicio: descripcion</h2>
       <p> specialty</p>
     </div>
