@@ -17,7 +17,7 @@ export class SignUpComponent {
   userType = '';  // 'student' or 'doctor'
   university = '';
   placeOfWork = '';
-  profilePicture: File | null = null;
+  profilePicture: string | null = null;
   profilePicturePreview: string | ArrayBuffer | null = null;
 
   constructor(private router: Router) {}
@@ -27,13 +27,14 @@ export class SignUpComponent {
   }
 
   onFileSelected(event: any) {
-    this.profilePicture = event.target.files[0];
-    if (this.profilePicture) {
+    const file = event.target.files[0];
+    if (file) {
       const reader = new FileReader();
       reader.onload = () => {
+        this.profilePicture = reader.result as string;
         this.profilePicturePreview = reader.result;
       };
-      reader.readAsDataURL(this.profilePicture);
+      reader.readAsDataURL(file);
     }
   }
 
@@ -49,7 +50,10 @@ export class SignUpComponent {
     if (this.userType === 'student') {
       user.university = this.university;
     }
+    if (this.profilePicture) {
+      user.profilePicture = this.profilePicture;
+    }
     console.log(user);
-      this.router.navigateByUrl('/sign-in');
+    this.router.navigateByUrl('/sign-in');
   }
 }

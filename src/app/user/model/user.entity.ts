@@ -13,6 +13,7 @@ export class User {
   state: string;
   userType: string; // 'student' or 'doctor'
   university?: string; // Optional property for students
+  profilePicture: string; // Optional property for the profile picture
 
   constructor() {
     this.id = 0;
@@ -28,5 +29,6 @@ export class User {
     this.subscriptions = 0;
     this.state = '';
     this.userType = ''; // Initialize with an empty string
+    this.profilePicture = ''; // Initialize with an empty string
   }
 }
